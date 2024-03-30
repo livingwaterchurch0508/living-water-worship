@@ -11,9 +11,17 @@ export default function AllCheckButton() {
   const { checkedItems, allCheckedItems } = usePressStore((state) => state);
   const { filteredList } = useFilteredListStore((state) => state);
 
-  const isChecked = filteredList
-    .filter((item) => !!item.song)
-    .every((item) => checkedItems.some(({ song }) => item.song === song));
+  const isChecked = () => {
+    const songFilterList = filteredList.filter((item) => !!item.song);
+
+    if (songFilterList.length === 0) {
+      return false;
+    }
+
+    return songFilterList.every((item) =>
+      checkedItems.some(({ song }) => item.song === song),
+    );
+  };
 
   const handleAllCheck = (e: React.ChangeEvent<HTMLInputElement>) => {
     allCheckedItems({ filteredList, isAllChecked: e.target.checked, tab });
@@ -31,7 +39,7 @@ export default function AllCheckButton() {
       justifyContent="center"
       alignItems="center"
     >
-      <Checkbox isChecked={isChecked} onChange={handleAllCheck} />
+      <Checkbox isChecked={isChecked()} onChange={handleAllCheck} />
     </Box>
   );
 }

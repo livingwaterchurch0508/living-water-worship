@@ -10,6 +10,8 @@ export default function NumberCheckedBox({ song, src }: ICheckedBoxItem) {
   };
 
   const setCheckedNumber = (song: string) => {
+    if (song.length === 0) return "";
+
     const number = checkedItems.findIndex(
       (checkSong) => checkSong.song === song,
     );
@@ -20,7 +22,7 @@ export default function NumberCheckedBox({ song, src }: ICheckedBoxItem) {
   return (
     <Checkbox
       ml={2}
-      disabled={!song}
+      disabled={song.length === 0}
       value={song}
       isChecked={checkedItems.some((item) => item.song === song)}
       onChange={handleChecked}
