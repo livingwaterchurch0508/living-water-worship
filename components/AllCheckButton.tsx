@@ -29,7 +29,11 @@ export default function AllCheckButton() {
       return;
     }
 
-    allCheckedItems({ filteredList, isAllChecked: e.target.checked, tab });
+    allCheckedItems({
+      filteredList: songFilterList,
+      isAllChecked: e.target.checked,
+      tab,
+    });
   };
 
   return (
