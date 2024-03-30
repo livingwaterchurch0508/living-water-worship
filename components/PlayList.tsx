@@ -87,8 +87,14 @@ export default function PlayList() {
     router.push(`/${tab}/${getNumberTitle(title)}`);
   };
 
-  return filteredList.map(
-    ({ title, isHomework = false, song = "", src }, idx) => (
+  return filteredList
+    .filter((item) => {
+      if (isLongPressed) {
+        return !!item.song;
+      }
+      return true;
+    })
+    .map(({ title, isHomework = false, song = "", src }, idx) => (
       <GridItem
         bg={song ? "purple.100" : "gray.200"}
         p={1}
@@ -115,6 +121,5 @@ export default function PlayList() {
           {isHomework ? `(*숙제)${title}` : title}
         </Button>
       </GridItem>
-    ),
-  );
+    ));
 }
