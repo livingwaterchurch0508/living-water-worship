@@ -79,6 +79,7 @@ export default function PlayList() {
     title: string,
   ) => {
     if (isLongPressed) {
+      if (song.length === 0) return;
       setCheckedItem({ song, src: `/${PATHS_BY_PAGE_TYPES[tab]}/${src}` });
       e.preventDefault(); // 링크 이벤트를 막음
       return;
