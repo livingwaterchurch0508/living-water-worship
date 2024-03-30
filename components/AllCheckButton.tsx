@@ -24,6 +24,11 @@ export default function AllCheckButton() {
   };
 
   const handleAllCheck = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const songFilterList = filteredList.filter((item) => !!item.song);
+    if (songFilterList.length === 0) {
+      return;
+    }
+
     allCheckedItems({ filteredList, isAllChecked: e.target.checked, tab });
   };
 
