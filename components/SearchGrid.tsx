@@ -8,7 +8,7 @@ interface ISearchGrid {
   list: IHymn[];
 }
 
-export default function SearchGrid({ list }: ISearchGrid) {
+export default function SearchGrid({ list = [] }: ISearchGrid) {
   const router = useRouter();
 
   if (list.length === 0) {
