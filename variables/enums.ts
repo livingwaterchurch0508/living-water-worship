@@ -1,0 +1,14 @@
+export enum TAB_TYPES {
+  HYMNS,
+  PRINTS,
+  PASTOR,
+  MICHAELS,
+  GOSPELS,
+}
+
+export enum SORT_TYPES {
+  LANGUAGE_ASC,
+  LANGUAGE_DESC,
+  NUMBER_ASC,
+  NUMBER_DESC,
+}
