@@ -1,12 +1,15 @@
 "use client";
 
 import React from "react";
+import { useRouter } from "next/navigation";
+
 import { Box, Button, useToast } from "@chakra-ui/react";
 import { usePressStore } from "@/store/press-store";
-import Link from "next/link";
 
 export default function PlayButton() {
-  const { checkedItems } = usePressStore((state) => state);
+  const router = useRouter();
+
+  const { checkedItems, clearCheckedItems } = usePressStore((state) => state);
   const { setIsLongPressed } = usePressStore((state) => state);
   const toast = useToast();
 
@@ -19,26 +22,30 @@ export default function PlayButton() {
       });
       return;
     }
+    router.push("/multi/play");
   };
 
   return (
     <Box
       position="fixed"
       right="2rem"
-      top="6rem"
+      top="7rem"
       h="60px"
       display="flex"
       justifyContent="center"
       alignItems="center"
       gap="1rem"
     >
-      <Link href="/multi" onClick={handlePlay}>
+      <Button colorScheme="green" size="sm" onClick={handlePlay}>
         재생하기
-      </Link>
+      </Button>
       <Button
         colorScheme="gray"
         size="sm"
-        onClick={() => setIsLongPressed(false)}
+        onClick={() => {
+          clearCheckedItems();
+          setIsLongPressed(false);
+        }}
       >
         취소
       </Button>

@@ -22,6 +22,7 @@ interface IPressState {
   checkedItems: ISongChecked[];
   setCheckedItem: ({ song, src, checked }: ISongChecked) => void;
   allCheckedItems: ({ filteredList, isAllChecked, tab }: IAllChecked) => void;
+  clearCheckedItems: () => void;
 }
 
 const usePressStore = create<IPressState>((set) => ({
@@ -66,6 +67,7 @@ const usePressStore = create<IPressState>((set) => ({
 
       return { ...state, checkedItems: state.checkedItems };
     }),
+  clearCheckedItems: () => set((state) => ({ ...state, checkedItems: [] })),
 }));
 
 export { usePressStore };

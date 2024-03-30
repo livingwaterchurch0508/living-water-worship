@@ -1,6 +1,7 @@
 "use client";
-import Link from "next/link";
+
 import { useEffect, useRef } from "react";
+import { useRouter } from "next/navigation";
 import { Button, GridItem } from "@chakra-ui/react";
 
 import { useSearchStore } from "@/store/search-store";
@@ -18,6 +19,8 @@ import NumberCheckedBox from "@/components/NumberCheckedBox";
 import { useFilteredListStore } from "@/store/filtered-list-store";
 
 export default function PlayList() {
+  const router = useRouter();
+
   const { search } = useSearchStore((state) => state);
   const { tab } = useTabStore((state) => state);
   const { sort } = useSortStore((state) => state);
@@ -71,13 +74,16 @@ export default function PlayList() {
   };
 
   const handleLinkClick = (
-    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
     { song, src }: ICheckedBoxItem,
+    title: string,
   ) => {
     if (isLongPressed) {
-      setCheckedItem({ song, src });
+      setCheckedItem({ song, src: `/${PATHS_BY_PAGE_TYPES[tab]}/${src}` });
       e.preventDefault(); // 링크 이벤트를 막음
+      return;
     }
+    router.push(`/${tab}/${getNumberTitle(title)}`);
   };
 
   return filteredList.map(
@@ -101,16 +107,11 @@ export default function PlayList() {
           w="100%"
           onMouseDown={handleMouseDown}
           onMouseUp={handleMouseUp}
-          onMouseLeave={handleMouseUp}
+          onTouchStart={handleMouseDown}
+          onTouchEnd={handleMouseUp}
+          onClick={(e) => handleLinkClick(e, { song, src }, title)}
         >
-          <Link
-            passHref={isLongPressed}
-            href={`/${tab}/${getNumberTitle(title)}`}
-            onClick={(e) => handleLinkClick(e, { song, src })}
-            style={{ width: "100%", height: "100%", alignContent: "center" }}
-          >
-            {isHomework ? `(*숙제)${title}` : title}
-          </Link>
+          {isHomework ? `(*숙제)${title}` : title}
         </Button>
       </GridItem>
     ),

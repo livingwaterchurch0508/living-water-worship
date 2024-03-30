@@ -23,7 +23,7 @@ export default function AllCheckButton() {
     <Box
       position="fixed"
       left="1.4rem"
-      top="6rem"
+      top="7rem"
       w="60px"
       h="60px"
       display="flex"
