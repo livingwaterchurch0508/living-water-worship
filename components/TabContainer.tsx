@@ -9,6 +9,7 @@ import HomeWork from "@/components/HomeWork";
 import { usePressStore } from "@/store/press-store";
 import AllCheckButton from "@/components/AllCheckButton";
 import PlayButton from "@/components/PlayButton";
+import MultiSelectButton from "@/components/MultiSelectButton";
 
 export default function TabContainer({ children }: { children: ReactNode }) {
   const { setSearch } = useSearchStore((state) => state);
@@ -39,6 +40,7 @@ export default function TabContainer({ children }: { children: ReactNode }) {
         </TabList>
       </Tabs>
       {children}
+      {!isLongPressed && <MultiSelectButton />}
       {isLongPressed && <AllCheckButton />}
       {isLongPressed && <PlayButton />}
       {/*<SortButton />*/}

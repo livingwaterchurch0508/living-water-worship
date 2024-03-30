@@ -21,7 +21,7 @@ export default function AudioItem({ song }: IAudioItem) {
     <Box
       position="fixed"
       width="100vw"
-      height="5rem"
+      height="3rem"
       display="flex"
       flexDirection="column"
       justifyContent="center"
