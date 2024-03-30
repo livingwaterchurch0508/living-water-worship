@@ -30,9 +30,31 @@ function numberSort(array: IHymn[], order: SORT_TYPES) {
   return order === SORT_TYPES.NUMBER_ASC ? sortedArray : sortedArray.reverse();
 }
 
-export function arraySort(array: IHymn[], order: SORT_TYPES) {
+function filterMulti(array: IHymn[]) {
+  const multiArray = array.filter(({ isMulti }) => {
+    return !!isMulti;
+  });
+
+  return array.filter(({ title, isMulti }) => {
+    if (multiArray.some(({ title: multiTitle }) => multiTitle === title)) {
+      return !!isMulti;
+    }
+    return true;
+  });
+}
+
+function filterIsHymn(array: IHymn[], isHymn: boolean) {
+  if (!isHymn) return array;
+  return array.filter(({ song }) => song);
+}
+
+export function arraySort(array: IHymn[], order: SORT_TYPES, isHymn: boolean) {
   if (order === SORT_TYPES.NUMBER_ASC || order === SORT_TYPES.NUMBER_DESC) {
-    return homeworkSort(numberSort(array, order));
+    return homeworkSort(
+      numberSort(filterMulti(filterIsHymn(array, isHymn)), order),
+    );
   }
-  return homeworkSort(koreanSort(array, order));
+  return homeworkSort(
+    koreanSort(filterMulti(filterIsHymn(array, isHymn)), order),
+  );
 }

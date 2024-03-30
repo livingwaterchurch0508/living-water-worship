@@ -2,12 +2,12 @@ import { create } from "zustand";
 
 interface SearchState {
   search: string;
-  setSearch: (str: string) => void;
+  setSearch: (search: string) => void;
 }
 
 const useSearchStore = create<SearchState>((set) => ({
   search: "",
-  setSearch: (str) => set(() => ({ search: str })),
+  setSearch: (search) => set({ search }),
 }));
 
 export { useSearchStore };

@@ -5,3 +5,8 @@ interface IHymn {
   isHomework?: boolean;
   song?: string;
 }
+
+interface ICheckedBoxItem {
+  song: string;
+  src: string;
+}

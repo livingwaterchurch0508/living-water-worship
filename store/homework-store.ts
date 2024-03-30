@@ -2,12 +2,12 @@ import { create } from "zustand";
 
 interface IHomeworkState {
   isHomework: boolean;
-  setIsHomework: (str: boolean) => void;
+  setIsHomework: (isHomework: boolean) => void;
 }
 
 const useHomeworkStore = create<IHomeworkState>((set) => ({
   isHomework: false,
-  setIsHomework: (bool) => set(() => ({ isHomework: bool })),
+  setIsHomework: (isHomework) => set({ isHomework }),
 }));
 
 export { useHomeworkStore };

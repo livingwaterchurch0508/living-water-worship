@@ -5,13 +5,15 @@ import { Box, Tab, TabList, Tabs } from "@chakra-ui/react";
 import SearchBar from "@/components/SearchBar";
 import { useTabStore } from "@/store/tab-store";
 import { useSearchStore } from "@/store/search-store";
-import CheckFilterHymn from "@/components/CheckFilterHymn";
 import HomeWork from "@/components/HomeWork";
-import SortButton from "@/components/SortButton";
+import { usePressStore } from "@/store/press-store";
+import AllCheckButton from "@/components/AllCheckButton";
+import PlayButton from "@/components/PlayButton";
 
 export default function TabContainer({ children }: { children: ReactNode }) {
   const { setSearch } = useSearchStore((state) => state);
   const { tab, setTab } = useTabStore((state) => state);
+  const { isLongPressed } = usePressStore((state) => state);
 
   return (
     <Box p="2rem">
@@ -37,8 +39,10 @@ export default function TabContainer({ children }: { children: ReactNode }) {
         </TabList>
       </Tabs>
       {children}
-      <SortButton />
-      <CheckFilterHymn />
+      {isLongPressed && <AllCheckButton />}
+      {isLongPressed && <PlayButton />}
+      {/*<SortButton />*/}
+      {/*<CheckFilterHymn />*/}
       <HomeWork />
     </Box>
   );

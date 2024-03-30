@@ -1,55 +1,50 @@
 "use client";
-import { useEffect, useState } from "react";
+import Link from "next/link";
+import { useEffect, useRef } from "react";
 import { Button, GridItem } from "@chakra-ui/react";
 
-import { MOCKS_BY_PAGE_TYPES } from "@/variables/constants";
 import { useSearchStore } from "@/store/search-store";
 import { useTabStore } from "@/store/tab-store";
-import { includeByCho } from "@/util/search-util";
-import Link from "next/link";
 import { useHymnStore } from "@/store/hymn-store";
 import { useSortStore } from "@/store/sort-store";
+import { usePressStore } from "@/store/press-store";
 import { arraySort } from "@/util/array-util";
+import { includeByCho } from "@/util/search-util";
+import {
+  MOCKS_BY_PAGE_TYPES,
+  PATHS_BY_PAGE_TYPES,
+} from "@/variables/constants";
+import NumberCheckedBox from "@/components/NumberCheckedBox";
+import { useFilteredListStore } from "@/store/filtered-list-store";
 
 export default function PlayList() {
   const { search } = useSearchStore((state) => state);
   const { tab } = useTabStore((state) => state);
   const { sort } = useSortStore((state) => state);
   const { isHymn } = useHymnStore((state) => state);
-  const [filteredList, setFilteredList] = useState<IHymn[]>(
-    MOCKS_BY_PAGE_TYPES[tab],
+  const { filteredList, setFilteredList } = useFilteredListStore(
+    (state) => state,
   );
+  const { setIsPressed, isLongPressed, setIsLongPressed, setCheckedItem } =
+    usePressStore((state) => state);
+  const timerRef = useRef<number | null>(null);
 
   useEffect(() => {
     if (!search) {
-      setFilteredList(MOCKS_BY_PAGE_TYPES[tab]);
+      setFilteredList(arraySort(MOCKS_BY_PAGE_TYPES[tab], sort, isHymn));
       return;
     }
 
     setFilteredList(
-      MOCKS_BY_PAGE_TYPES[tab].filter(({ title }) =>
-        includeByCho(search, title),
+      arraySort(
+        MOCKS_BY_PAGE_TYPES[tab].filter(({ title }) =>
+          includeByCho(search, title),
+        ),
+        sort,
+        isHymn,
       ),
     );
   }, [search, tab]);
-
-  function filterMulti(array: IHymn[]) {
-    const multiArray = array.filter(({ isMulti }) => {
-      return !!isMulti;
-    });
-
-    return array.filter(({ title, isMulti }) => {
-      if (multiArray.some(({ title: multiTitle }) => multiTitle === title)) {
-        return !!isMulti;
-      }
-      return true;
-    });
-  }
-
-  function filterIsHymn(array: IHymn[]) {
-    if (!isHymn) return array;
-    return array.filter(({ song }) => song);
-  }
 
   function getNumberTitle(title: string) {
     const [hymnTitle] = title.split(".");
@@ -57,19 +52,66 @@ export default function PlayList() {
     return hymnTitle;
   }
 
-  return arraySort(filterMulti(filterIsHymn([...filteredList])), sort).map(
-    ({ title, isHomework = false, song = "" }, idx) => (
+  const handleMouseDown = () => {
+    if (!isLongPressed) {
+      setIsPressed(true);
+      timerRef.current = window.setTimeout(() => {
+        setIsLongPressed(true);
+      }, 1500); // 1.5초 후에 setIsLongPressed(true) 호출
+    }
+  };
+
+  const handleMouseUp = () => {
+    if (!isLongPressed) {
+      setIsPressed(false);
+      if (timerRef.current !== null) {
+        window.clearTimeout(timerRef.current); // 타이머 클리어
+      }
+    }
+  };
+
+  const handleLinkClick = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+    { song, src }: ICheckedBoxItem,
+  ) => {
+    if (isLongPressed) {
+      setCheckedItem({ song, src });
+      e.preventDefault(); // 링크 이벤트를 막음
+    }
+  };
+
+  return filteredList.map(
+    ({ title, isHomework = false, song = "", src }, idx) => (
       <GridItem
         bg={song ? "purple.100" : "gray.200"}
         p={1}
         key={`${title}_${idx}`}
         overflow="hidden"
+        display="flex"
+        gap={4}
       >
-        <Link href={`/${tab}/${getNumberTitle(title)}`}>
-          <Button fontSize="xs" w="90%">
+        {isLongPressed && (
+          <NumberCheckedBox
+            song={song}
+            src={`/${PATHS_BY_PAGE_TYPES[tab]}/${src}`}
+          />
+        )}
+        <Button
+          fontSize="xs"
+          w="100%"
+          onMouseDown={handleMouseDown}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseUp}
+        >
+          <Link
+            passHref={isLongPressed}
+            href={`/${tab}/${getNumberTitle(title)}`}
+            onClick={(e) => handleLinkClick(e, { song, src })}
+            style={{ width: "100%", height: "100%", alignContent: "center" }}
+          >
             {isHomework ? `(*숙제)${title}` : title}
-          </Button>
-        </Link>
+          </Link>
+        </Button>
       </GridItem>
     ),
   );

@@ -2,12 +2,12 @@ import { create } from "zustand";
 
 interface IHymnState {
   isHymn: boolean;
-  setIsHymn: (str: boolean) => void;
+  setIsHymn: (isHymn: boolean) => void;
 }
 
 const useHymnStore = create<IHymnState>((set) => ({
   isHymn: false,
-  setIsHymn: (bool) => set(() => ({ isHymn: bool })),
+  setIsHymn: (isHymn) => set({ isHymn }),
 }));
 
 export { useHymnStore };

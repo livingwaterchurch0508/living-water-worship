@@ -7,8 +7,8 @@ interface ISortState {
 }
 
 const useSortStore = create<ISortState>((set) => ({
-  sort: SORT_TYPES.LANGUAGE_ASC,
-  setSort: (sort) => set(() => ({ sort })),
+  sort: SORT_TYPES.NUMBER_ASC,
+  setSort: (sort) => set({ sort }),
 }));
 
 export { useSortStore };

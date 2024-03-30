@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <TabContainer>
       <Box
-        height="calc(100vh - 14rem)"
-        mt="10rem"
+        height="calc(100vh - 11rem)"
+        mt="7rem"
         overflow="auto"
         className={styles.grid}
       >

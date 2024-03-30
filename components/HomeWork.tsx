@@ -10,7 +10,7 @@ export default function HomeWork() {
     <>
       <Box
         position="fixed"
-        left="2rem"
+        right="2rem"
         bottom="2rem"
         w="60px"
         h="60px"
@@ -30,10 +30,9 @@ export default function HomeWork() {
       {isHomework && (
         <Box
           position="fixed"
-          left="2rem"
-          right="0"
+          right="2rem"
           bottom="calc(2rem + 80px)"
-          width="15rem"
+          width="13rem"
           padding="1rem"
           background="red.200"
           whiteSpace="pre-line"
