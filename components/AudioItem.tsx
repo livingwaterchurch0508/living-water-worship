@@ -19,11 +19,14 @@ export default function AudioItem({ song }: IAudioItem) {
 
   return (
     <Box
+      position="fixed"
+      width="100vw"
+      height="5rem"
       display="flex"
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
-      mb={2}
+      bg="white"
     >
       <Text>{audioTitle}</Text>
       <audio controls ref={audioRef} />

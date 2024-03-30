@@ -5,14 +5,21 @@ import AudioPlayer from "react-audio-player";
 import { Box, IconButton, Text } from "@chakra-ui/react";
 
 import { usePressStore } from "@/store/press-store";
-import { ArrowLeftIcon, ArrowRightIcon, CheckIcon } from "@chakra-ui/icons";
+import { ArrowLeftIcon, ArrowRightIcon } from "@chakra-ui/icons";
 
 export default function MultiAudioItem() {
   const { checkedItems } = usePressStore((state) => state);
   const [currentAudioIndex, setCurrentAudioIndex] = useState(0);
 
   return (
-    <Box display="flex" flexDirection="column">
+    <Box
+      display="flex"
+      flexDirection="column"
+      position="fixed"
+      width="100vw"
+      height="7rem"
+      bg="white"
+    >
       <Box display="flex" alignItems="center" justifyContent="space-around">
         <Text>
           {

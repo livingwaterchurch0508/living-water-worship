@@ -10,6 +10,7 @@ export default function SearchItem({ title, src, song }: IHymn) {
     <GridItem bg="gray.200" p={2}>
       {song && <AudioItem song={song} />}
       <Box
+        mt="4rem"
         height={song ? "calc(100vh - 5rem)" : "calc(100vh - 1rem)"}
         display="flex"
         justifyContent="center"
