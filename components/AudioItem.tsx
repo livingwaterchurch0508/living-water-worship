@@ -29,7 +29,7 @@ export default function AudioItem({ song }: IAudioItem) {
       bg="white"
     >
       <Text>{audioTitle}</Text>
-      <audio controls ref={audioRef} />
+      <audio controls ref={audioRef} loop />
     </Box>
   );
 }
