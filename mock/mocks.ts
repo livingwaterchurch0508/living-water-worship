@@ -155,7 +155,6 @@ export const hymns: IHymn[] = [
   {
     src: "새찬송가반주용(A4사이즈)_94.jpg",
     title: "94.주예수보다더귀한것은없네",
-    isHomework: true,
     song: "주예수보다더귀한것은없네.m4a",
   },
   {
@@ -2101,5 +2100,10 @@ export const michaels: IHymn[] = [
     src: "약한나를강하게.jpg",
     title: "1726. 약한나를강하게",
     song: "1726약한나를강하게.m4a",
+  },
+  {
+    src: "사명.jpg",
+    title: "2068. 사명",
+    isHomework: true,
   },
 ];
