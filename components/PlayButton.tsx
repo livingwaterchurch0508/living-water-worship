@@ -10,7 +10,7 @@ export default function PlayButton() {
   const router = useRouter();
 
   const { checkedItems, clearCheckedItems } = usePressStore((state) => state);
-  const { setIsLongPressed } = usePressStore((state) => state);
+  const { setEnabledMultiSelect } = usePressStore((state) => state);
   const toast = useToast();
 
   const handlePlay = () => {
@@ -44,7 +44,7 @@ export default function PlayButton() {
         size="sm"
         onClick={() => {
           clearCheckedItems();
-          setIsLongPressed(false);
+          setEnabledMultiSelect(false);
         }}
       >
         취소

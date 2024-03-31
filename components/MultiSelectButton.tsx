@@ -5,7 +5,7 @@ import React from "react";
 import { usePressStore } from "@/store/press-store";
 
 export default function MultiSelectButton() {
-  const { setIsLongPressed } = usePressStore((state) => state);
+  const { setEnabledMultiSelect } = usePressStore((state) => state);
 
   return (
     <Box
@@ -21,7 +21,7 @@ export default function MultiSelectButton() {
       <Button
         colorScheme="green"
         size="sm"
-        onClick={() => setIsLongPressed(true)}
+        onClick={() => setEnabledMultiSelect(true)}
       >
         여러개 선택하기
       </Button>

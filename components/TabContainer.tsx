@@ -14,7 +14,7 @@ import MultiSelectButton from "@/components/MultiSelectButton";
 export default function TabContainer({ children }: { children: ReactNode }) {
   const { setSearch } = useSearchStore((state) => state);
   const { tab, setTab } = useTabStore((state) => state);
-  const { isLongPressed } = usePressStore((state) => state);
+  const { enabledMultiSelect } = usePressStore((state) => state);
 
   return (
     <Box p="2rem">
@@ -40,9 +40,9 @@ export default function TabContainer({ children }: { children: ReactNode }) {
         </TabList>
       </Tabs>
       {children}
-      {!isLongPressed && <MultiSelectButton />}
-      {isLongPressed && <AllCheckButton />}
-      {isLongPressed && <PlayButton />}
+      {!enabledMultiSelect && <MultiSelectButton />}
+      {enabledMultiSelect && <AllCheckButton />}
+      {enabledMultiSelect && <PlayButton />}
       {/*<SortButton />*/}
       {/*<CheckFilterHymn />*/}
       <HomeWork />

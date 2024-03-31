@@ -15,10 +15,8 @@ interface IAllChecked {
 }
 
 interface IPressState {
-  isPressed: boolean;
-  setIsPressed: (isPressed: boolean) => void;
-  isLongPressed: boolean;
-  setIsLongPressed: (isLongPressed: boolean) => void;
+  enabledMultiSelect: boolean;
+  setEnabledMultiSelect: (enabledMultiSelect: boolean) => void;
   checkedItems: ISongChecked[];
   setCheckedItem: ({ song, src, checked }: ISongChecked) => void;
   allCheckedItems: ({ filteredList, isAllChecked, tab }: IAllChecked) => void;
@@ -26,10 +24,8 @@ interface IPressState {
 }
 
 const usePressStore = create<IPressState>((set) => ({
-  isPressed: false,
-  setIsPressed: (isPressed) => set({ isPressed }),
-  isLongPressed: false,
-  setIsLongPressed: (isLongPressed) => set({ isLongPressed }),
+  enabledMultiSelect: false,
+  setEnabledMultiSelect: (enabledMultiSelect) => set({ enabledMultiSelect }),
   checkedItems: [],
   setCheckedItem: ({ song, src, checked }) =>
     set((state) => {

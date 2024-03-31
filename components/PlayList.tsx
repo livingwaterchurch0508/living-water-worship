@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Button, GridItem } from "@chakra-ui/react";
 
@@ -28,9 +28,9 @@ export default function PlayList() {
   const { filteredList, setFilteredList } = useFilteredListStore(
     (state) => state,
   );
-  const { setIsPressed, isLongPressed, setIsLongPressed, setCheckedItem } =
-    usePressStore((state) => state);
-  const timerRef = useRef<number | null>(null);
+  const { enabledMultiSelect, setCheckedItem } = usePressStore(
+    (state) => state,
+  );
 
   useEffect(() => {
     if (!search) {
@@ -55,30 +55,12 @@ export default function PlayList() {
     return hymnTitle;
   }
 
-  const handleMouseDown = () => {
-    if (!isLongPressed) {
-      setIsPressed(true);
-      timerRef.current = window.setTimeout(() => {
-        setIsLongPressed(true);
-      }, 1500); // 1.5초 후에 setIsLongPressed(true) 호출
-    }
-  };
-
-  const handleMouseUp = () => {
-    if (!isLongPressed) {
-      setIsPressed(false);
-      if (timerRef.current !== null) {
-        window.clearTimeout(timerRef.current); // 타이머 클리어
-      }
-    }
-  };
-
   const handleLinkClick = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
     { song, src }: ICheckedBoxItem,
     title: string,
   ) => {
-    if (isLongPressed) {
+    if (enabledMultiSelect) {
       if (song.length === 0) return;
       setCheckedItem({ song, src: `/${PATHS_BY_PAGE_TYPES[tab]}/${src}` });
       e.preventDefault(); // 링크 이벤트를 막음
@@ -89,7 +71,7 @@ export default function PlayList() {
 
   return filteredList
     .filter((item) => {
-      if (isLongPressed) {
+      if (enabledMultiSelect) {
         return !!item.song;
       }
       return true;
@@ -103,7 +85,7 @@ export default function PlayList() {
         display="flex"
         gap={4}
       >
-        {isLongPressed && (
+        {enabledMultiSelect && (
           <NumberCheckedBox
             song={song}
             src={`/${PATHS_BY_PAGE_TYPES[tab]}/${src}`}
@@ -112,10 +94,6 @@ export default function PlayList() {
         <Button
           fontSize="xs"
           w="100%"
-          onMouseDown={handleMouseDown}
-          onMouseUp={handleMouseUp}
-          onTouchStart={handleMouseDown}
-          onTouchEnd={handleMouseUp}
           onClick={(e) => handleLinkClick(e, { song, src }, title)}
         >
           {isHomework ? `(*숙제)${title}` : title}
