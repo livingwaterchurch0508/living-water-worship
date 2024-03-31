@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Box, IconButton, Text } from "@chakra-ui/react";
+import { Box, IconButton } from "@chakra-ui/react";
 import { WarningIcon } from "@chakra-ui/icons";
 import { useHomeworkStore } from "@/store/homework-store";
 
@@ -12,11 +12,10 @@ export default function HomeWork() {
         position="fixed"
         right="2rem"
         bottom="2rem"
-        w="60px"
-        h="60px"
+        w="40px"
+        h="40px"
         textAlign="center"
       >
-        <Text fontSize="sm">숙제확인</Text>
         <IconButton
           isRound={true}
           variant="solid"
@@ -31,7 +30,7 @@ export default function HomeWork() {
         <Box
           position="fixed"
           right="2rem"
-          bottom="calc(2rem + 80px)"
+          bottom="calc(2rem + 50px)"
           width="13rem"
           padding="1rem"
           background="red.200"
