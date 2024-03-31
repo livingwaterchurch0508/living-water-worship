@@ -1,5 +1,9 @@
-import { gospels, hymns, michaels, pastors, prints } from "@/mock/mocks";
 import { TAB_TYPES } from "@/variables/enums";
+import { hymns } from "@/mock/hymns";
+import { gospels } from "@/mock/gospels";
+import { prints } from "@/mock/prints";
+import { pastors } from "@/mock/pastors";
+import { michaels } from "@/mock/michaels";
 
 export const MOCKS_BY_PAGE_TYPES = {
   [TAB_TYPES.HYMNS]: hymns,
