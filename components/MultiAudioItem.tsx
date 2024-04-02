@@ -1,15 +1,16 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import AudioPlayer from "react-audio-player";
 import { Box, IconButton, Text } from "@chakra-ui/react";
 
 import { usePressStore } from "@/store/press-store";
 import { ArrowLeftIcon, ArrowRightIcon } from "@chakra-ui/icons";
+import { useMultiAudioStore } from "@/store/multi-audio-store";
 
 export default function MultiAudioItem() {
   const { checkedItems } = usePressStore((state) => state);
-  const [currentAudioIndex, setCurrentAudioIndex] = useState(0);
+  const { audioIndex, setAudioIndex } = useMultiAudioStore((state) => state);
 
   return (
     <Box
@@ -24,19 +25,15 @@ export default function MultiAudioItem() {
         <Text>
           {
             checkedItems[
-              currentAudioIndex === 0
-                ? checkedItems.length - 1
-                : currentAudioIndex - 1
+              audioIndex === 0 ? checkedItems.length - 1 : audioIndex - 1
             ].song.split(".")[0]
           }
         </Text>
-        <Text>{checkedItems[currentAudioIndex].song.split(".")[0]}</Text>
+        <Text>{checkedItems[audioIndex].song.split(".")[0]}</Text>
         <Text>
           {
             checkedItems[
-              checkedItems.length - 1 === currentAudioIndex
-                ? 0
-                : currentAudioIndex + 1
+              checkedItems.length - 1 === audioIndex ? 0 : audioIndex + 1
             ].song.split(".")[0]
           }
         </Text>
@@ -50,18 +47,18 @@ export default function MultiAudioItem() {
           fontSize="20px"
           icon={<ArrowLeftIcon />}
           onClick={() =>
-            setCurrentAudioIndex((prevIndex) =>
-              prevIndex === 0 ? checkedItems.length - 1 : prevIndex - 1,
+            setAudioIndex(
+              audioIndex === 0 ? checkedItems.length - 1 : audioIndex - 1,
             )
           }
         />
         <AudioPlayer
           autoPlay
           controls
-          src={`/songs/${checkedItems[currentAudioIndex].song}`}
+          src={`/songs/${checkedItems[audioIndex].song}`}
           onEnded={() => {
-            setCurrentAudioIndex((prevIndex) =>
-              prevIndex === checkedItems.length - 1 ? 0 : prevIndex + 1,
+            setAudioIndex(
+              audioIndex === checkedItems.length - 1 ? 0 : audioIndex + 1,
             );
           }}
         />
@@ -73,8 +70,8 @@ export default function MultiAudioItem() {
           fontSize="20px"
           icon={<ArrowRightIcon />}
           onClick={() =>
-            setCurrentAudioIndex((prevIndex) =>
-              prevIndex === checkedItems.length - 1 ? 0 : prevIndex + 1,
+            setAudioIndex(
+              audioIndex === checkedItems.length - 1 ? 0 : audioIndex + 1,
             )
           }
         />
