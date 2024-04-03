@@ -10,13 +10,13 @@ export const michaels: IHymn[] = [
     title: "650. 주님의영광이임하여서",
   },
   {
-    src: "전능하신나의주하나님-1.jpg",
+    src: "전능하신나의주하나님.jpg",
     title: "2066. 전능하신나의주하나님",
     song: "전능하신나의주하나님은.m4a",
     isMulti: 2,
   },
   {
-    src: "전능하신나의주하나님-2.jpg",
+    src: "전능하신나의주하나님-1.jpg",
     title: "2066. 전능하신나의주하나님",
   },
   {
@@ -53,5 +53,6 @@ export const michaels: IHymn[] = [
     src: "사명.jpg",
     title: "2068. 사명",
     isHomework: true,
+    song: "사명.m4a",
   },
 ];
