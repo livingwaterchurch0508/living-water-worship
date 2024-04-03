@@ -2,9 +2,7 @@ import { create } from "zustand";
 import { TAB_TYPES } from "@/variables/enums";
 import { PATHS_BY_PAGE_TYPES } from "@/variables/constants";
 
-interface ISongChecked {
-  song: string;
-  src: string;
+interface ISongChecked extends ICheckedBoxItem {
   checked?: boolean;
 }
 
@@ -18,7 +16,7 @@ interface IPressState {
   enabledMultiSelect: boolean;
   setEnabledMultiSelect: (enabledMultiSelect: boolean) => void;
   checkedItems: ISongChecked[];
-  setCheckedItem: ({ song, src, checked }: ISongChecked) => void;
+  setCheckedItem: ({ song, src, isMulti, checked }: ISongChecked) => void;
   allCheckedItems: ({ filteredList, isAllChecked, tab }: IAllChecked) => void;
   clearCheckedItems: () => void;
 }
@@ -27,17 +25,17 @@ const usePressStore = create<IPressState>((set) => ({
   enabledMultiSelect: false,
   setEnabledMultiSelect: (enabledMultiSelect) => set({ enabledMultiSelect }),
   checkedItems: [],
-  setCheckedItem: ({ song, src, checked }) =>
+  setCheckedItem: ({ song, src, isMulti, checked }) =>
     set((state) => {
       if (checked) {
-        state.checkedItems.push({ song, src });
+        state.checkedItems.push({ song, src, isMulti });
       } else {
         if (state.checkedItems.some((item) => item.song === song)) {
           state.checkedItems = state.checkedItems.filter(
             (item) => item.song !== song,
           );
         } else {
-          state.checkedItems.push({ song, src });
+          state.checkedItems.push({ song, src, isMulti });
         }
       }
       return { ...state, checkedItems: state.checkedItems };

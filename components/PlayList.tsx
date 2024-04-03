@@ -57,12 +57,16 @@ export default function PlayList() {
 
   const handleLinkClick = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
-    { song, src }: ICheckedBoxItem,
+    { song, src, isMulti }: ICheckedBoxItem,
     title: string,
   ) => {
     if (enabledMultiSelect) {
       if (song.length === 0) return;
-      setCheckedItem({ song, src: `/${PATHS_BY_PAGE_TYPES[tab]}/${src}` });
+      setCheckedItem({
+        song,
+        src: `/${PATHS_BY_PAGE_TYPES[tab]}/${src}`,
+        isMulti,
+      });
       e.preventDefault(); // 링크 이벤트를 막음
       return;
     }
@@ -76,7 +80,7 @@ export default function PlayList() {
       }
       return true;
     })
-    .map(({ title, isHomework = false, song = "", src }, idx) => (
+    .map(({ title, isHomework = false, song = "", src, isMulti }, idx) => (
       <GridItem
         bg={song ? "purple.100" : "gray.200"}
         p={1}
@@ -94,7 +98,7 @@ export default function PlayList() {
         <Button
           fontSize="xs"
           w="100%"
-          onClick={(e) => handleLinkClick(e, { song, src }, title)}
+          onClick={(e) => handleLinkClick(e, { song, src, isMulti }, title)}
         >
           {isHomework ? `(*숙제)${title}` : title}
         </Button>

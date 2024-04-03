@@ -28,23 +28,56 @@ export default function MultiContainer() {
       }
     }
   }, [audioIndex]);
+  console.log(checkedItems);
 
   return (
     <>
       <MultiAudioItem />
       <Box mt="7rem">
         <Grid width="calc(100vw)" templateColumns={"repeat(1, 1fr)"} gap={1}>
-          {checkedItems.map(({ song, src }, index) => (
-            <GridItem bg="gray.200" p={2} key={song}>
-              <Box
-                height={song ? "calc(100vh - 5rem)" : "calc(100vh - 1rem)"}
-                display="flex"
-                justifyContent="center"
-                ref={(ref) => (divRefs.current[index] = ref)}
-              >
-                <Image src={src} alt={song} height="100%" />
-              </Box>
-            </GridItem>
+          {checkedItems.map(({ song, src, isMulti }, index) => (
+            <>
+              <GridItem bg="gray.200" p={2} key={song}>
+                <Box
+                  height={song ? "calc(100vh - 5rem)" : "calc(100vh - 1rem)"}
+                  display="flex"
+                  justifyContent="center"
+                  ref={(ref) => (divRefs.current[index] = ref)}
+                >
+                  <Image src={src} alt={song} height="100%" />
+                </Box>
+              </GridItem>
+              {isMulti === 2 && (
+                <GridItem bg="gray.200" p={2} key={song}>
+                  <Box
+                    height={song ? "calc(100vh - 5rem)" : "calc(100vh - 1rem)"}
+                    display="flex"
+                    justifyContent="center"
+                  >
+                    <Image
+                      src={src.replace(".jpg", "-1.jpg")}
+                      alt={song}
+                      height="100%"
+                    />
+                  </Box>
+                </GridItem>
+              )}
+              {isMulti === 3 && (
+                <GridItem bg="gray.200" p={2} key={song}>
+                  <Box
+                    height={song ? "calc(100vh - 5rem)" : "calc(100vh - 1rem)"}
+                    display="flex"
+                    justifyContent="center"
+                  >
+                    <Image
+                      src={src.replace(".jpg", "-2.jpg")}
+                      alt={song}
+                      height="100%"
+                    />
+                  </Box>
+                </GridItem>
+              )}
+            </>
           ))}
         </Grid>
       </Box>

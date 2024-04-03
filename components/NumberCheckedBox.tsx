@@ -1,12 +1,16 @@
 import { Checkbox } from "@chakra-ui/react";
 import { usePressStore } from "@/store/press-store";
 
-export default function NumberCheckedBox({ song, src }: ICheckedBoxItem) {
+export default function NumberCheckedBox({
+  song,
+  src,
+  isMulti,
+}: ICheckedBoxItem) {
   const { checkedItems, setCheckedItem } = usePressStore((state) => state);
 
   const handleChecked = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value: song, checked } = e.target;
-    setCheckedItem({ song, src, checked });
+    setCheckedItem({ song, src, isMulti, checked });
   };
 
   const setCheckedNumber = (song: string) => {
