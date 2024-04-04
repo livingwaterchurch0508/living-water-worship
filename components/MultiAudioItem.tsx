@@ -20,8 +20,6 @@ export default function xMultiAudioItem() {
         setAudioIndex(
           audioIndex === checkedItems.length - 1 ? 0 : audioIndex + 1,
         );
-        audioElement.src = `/songs/${checkedItems[audioIndex].song}`;
-        audioElement.play();
       }
     };
 
@@ -83,7 +81,12 @@ export default function xMultiAudioItem() {
             )
           }
         />
-        <audio autoPlay controls ref={audioRef} />
+        <audio
+          autoPlay
+          controls
+          ref={audioRef}
+          src={`/songs/${checkedItems[audioIndex].song}`}
+        />
         <IconButton
           isRound={true}
           variant="solid"

@@ -10,6 +10,7 @@ import { usePressStore } from "@/store/press-store";
 import AllCheckButton from "@/components/AllCheckButton";
 import PlayButton from "@/components/PlayButton";
 import MultiSelectButton from "@/components/MultiSelectButton";
+import Help from "@/components/Help";
 
 export default function TabContainer({ children }: { children: ReactNode }) {
   const { setSearch } = useSearchStore((state) => state);
@@ -45,6 +46,7 @@ export default function TabContainer({ children }: { children: ReactNode }) {
       {enabledMultiSelect && <PlayButton />}
       {/*<SortButton />*/}
       {/*<CheckFilterHymn />*/}
+      <Help />
       <HomeWork />
     </Box>
   );
