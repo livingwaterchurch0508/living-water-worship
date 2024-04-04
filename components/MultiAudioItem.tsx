@@ -8,16 +8,19 @@ import { ArrowLeftIcon, ArrowRightIcon } from "@chakra-ui/icons";
 import { useMultiAudioStore } from "@/store/multi-audio-store";
 
 export default function xMultiAudioItem() {
-  const audioRef = useRef<HTMLAudioElement>(null);
-
   const { checkedItems } = usePressStore((state) => state);
   const { audioIndex, setAudioIndex } = useMultiAudioStore((state) => state);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
     const audioElement = audioRef.current;
 
     const handleEnded = () => {
       if (audioElement) {
+        setAudioIndex(
+          audioIndex === checkedItems.length - 1 ? 0 : audioIndex + 1,
+        );
+        audioElement.src = `/songs/${checkedItems[audioIndex].song}`;
         audioElement.play();
       }
     };
@@ -32,6 +35,13 @@ export default function xMultiAudioItem() {
       }
     };
   }, [audioIndex]);
+
+  useEffect(() => {
+    const audioElement = audioRef.current;
+    if (audioElement) {
+      audioElement.src = `/songs/${checkedItems[audioIndex].song}`;
+    }
+  }, []);
 
   return (
     <Box
@@ -73,12 +83,7 @@ export default function xMultiAudioItem() {
             )
           }
         />
-        <audio
-          autoPlay
-          controls
-          src={`/songs/${checkedItems[audioIndex].song}`}
-          ref={audioRef}
-        />
+        <audio autoPlay controls ref={audioRef} />
         <IconButton
           isRound={true}
           variant="solid"
