@@ -1,16 +1,37 @@
 "use client";
 
-import React from "react";
-import AudioPlayer from "react-audio-player";
+import React, { useEffect, useRef } from "react";
 import { Box, IconButton, Text } from "@chakra-ui/react";
 
 import { usePressStore } from "@/store/press-store";
 import { ArrowLeftIcon, ArrowRightIcon } from "@chakra-ui/icons";
 import { useMultiAudioStore } from "@/store/multi-audio-store";
 
-export default function MultiAudioItem() {
+export default function xMultiAudioItem() {
+  const audioRef = useRef<HTMLAudioElement>(null);
+
   const { checkedItems } = usePressStore((state) => state);
   const { audioIndex, setAudioIndex } = useMultiAudioStore((state) => state);
+
+  useEffect(() => {
+    const audioElement = audioRef.current;
+
+    const handleEnded = () => {
+      if (audioElement) {
+        audioElement.play();
+      }
+    };
+
+    if (audioElement) {
+      audioElement.addEventListener("ended", handleEnded);
+    }
+
+    return () => {
+      if (audioElement) {
+        audioElement.removeEventListener("ended", handleEnded);
+      }
+    };
+  }, [audioIndex]);
 
   return (
     <Box
@@ -52,15 +73,11 @@ export default function MultiAudioItem() {
             )
           }
         />
-        <AudioPlayer
+        <audio
           autoPlay
           controls
           src={`/songs/${checkedItems[audioIndex].song}`}
-          onEnded={() => {
-            setAudioIndex(
-              audioIndex === checkedItems.length - 1 ? 0 : audioIndex + 1,
-            );
-          }}
+          ref={audioRef}
         />
         <IconButton
           isRound={true}

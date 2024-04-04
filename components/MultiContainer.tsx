@@ -28,7 +28,6 @@ export default function MultiContainer() {
       }
     }
   }, [audioIndex]);
-  console.log(checkedItems);
 
   return (
     <>
