@@ -34,13 +34,6 @@ export default function xMultiAudioItem() {
     };
   }, [audioIndex]);
 
-  useEffect(() => {
-    const audioElement = audioRef.current;
-    if (audioElement) {
-      audioElement.src = `/songs/${checkedItems[audioIndex].song}`;
-    }
-  }, []);
-
   return (
     <Box
       display="flex"
