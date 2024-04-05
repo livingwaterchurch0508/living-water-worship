@@ -1,4 +1,10 @@
 export const hymns: IHymn[] = [
+  {
+    src: "기도반주.jpg",
+    title: "0.기도반주",
+    song: "기도반주.m4a",
+    isHomework: true,
+  },
   { src: "새찬송가반주용(A4사이즈)_1.jpg", title: "1.만복의근원하나님" },
   { src: "새찬송가반주용(A4사이즈)_2.jpg", title: "2.찬양성부성자성령" },
   { src: "새찬송가반주용(A4사이즈)_3.jpg", title: "3.성부성자와성령" },
