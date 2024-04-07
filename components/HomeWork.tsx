@@ -37,8 +37,8 @@ export default function HomeWork() {
           whiteSpace="pre-line"
           borderRadius={8}
         >
-          {`3월 31일 ~ 4월 7일 
-            - 매일 복음성가 2068 사명 부르기  
+          {`4월 7일 ~ 4월 14일 
+            - 시편 23절 암송  
             - 구약 3장 신약 3장 읽기 
             `}
         </Box>

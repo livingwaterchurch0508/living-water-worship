@@ -52,7 +52,21 @@ export const michaels: IHymn[] = [
   {
     src: "사명.jpg",
     title: "2068. 사명",
-    isHomework: true,
     song: "사명.m4a",
+  },
+  {
+    src: "주님보좌앞에나아가.jpg",
+    title: "1724. 주님보좌앞에나아가",
+    song: "주님보좌앞에나아가.m4a",
+  },
+  {
+    src: "654사랑해요.jpg",
+    title: "654. 사랑해요목소리높여",
+    song: "사랑해요목소리높여.m4a",
+  },
+  {
+    src: "목마른사슴.jpg",
+    title: "608. 목마른사슴",
+    song: "목마른사슴시냇물을찾아.m4a",
   },
 ];
