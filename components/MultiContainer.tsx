@@ -7,6 +7,7 @@ import { Box, Grid, GridItem, Image } from "@chakra-ui/react";
 import MultiAudioItem from "@/components/MultiAudioItem";
 import { usePressStore } from "@/store/press-store";
 import { useMultiAudioStore } from "@/store/multi-audio-store";
+import { useDeviceStore } from "@/store/device-store";
 
 export default function MultiContainer() {
   const router = useRouter();
@@ -14,6 +15,7 @@ export default function MultiContainer() {
 
   const { audioIndex } = useMultiAudioStore((state) => state);
   const { checkedItems } = usePressStore((state) => state);
+  const { browserHeight } = useDeviceStore((state) => state);
 
   if (checkedItems.length === 0) {
     router.replace("/");
@@ -38,7 +40,11 @@ export default function MultiContainer() {
             <>
               <GridItem bg="gray.200" p={2} key={song}>
                 <Box
-                  height={song ? "calc(100vh - 5rem)" : "calc(100vh - 1rem)"}
+                  height={
+                    song
+                      ? `calc(100vh - 5rem - ${browserHeight}px)`
+                      : `calc(100vh - 1rem - ${browserHeight}px)`
+                  }
                   display="flex"
                   justifyContent="center"
                   ref={(ref) => (divRefs.current[index] = ref)}
