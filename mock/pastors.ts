@@ -22,8 +22,12 @@ export const pastors: IHymn[] = [
     isMulti: 2,
   },
   { src: "11_아침이슬내린그아침에-1.jpg", title: "11.아침이슬내린그아침에" },
-  { src: "12_주님의마음.jpg", title: "12.주님의마음" },
-  { src: "13_주님의뜻이뤄지도록.jpg", title: "13.주님의뜻이뤄지도록" },
+  { src: "12_주님의마음.jpg", title: "12.주님의마음", song: "주님의마음.m4a" },
+  {
+    src: "13_주님의뜻이뤄지도록.jpg",
+    title: "13.주님의뜻이뤄지도록",
+    song: "주님의뜻이뤄지도록.m4a",
+  },
   { src: "14_하나님한분만으로.jpg", title: "14.하나님한분만으로" },
   { src: "15_생명의길.jpg", title: "15.생명의길", isMulti: 2 },
   { src: "15_생명의길-1.jpg", title: "15.생명의길" },
@@ -44,7 +48,11 @@ export const pastors: IHymn[] = [
   { src: "18_주님가신그길.jpg", title: "18.주님가신그길" },
   { src: "19_예수의보혈.jpg", title: "19.예수의보혈" },
   { src: "20_주님의사랑으로.jpg", title: "20.주님의사랑으로" },
-  { src: "21_주님의은혜를생각하면.jpg", title: "21.주님의은혜를생각하면" },
+  {
+    src: "21_주님의은혜를생각하면.jpg",
+    title: "21.주님의은혜를생각하면",
+    song: "주님의은혜를생각하면.m4a",
+  },
   {
     src: "22_주님의뜻안에가는길에.jpg",
     title: "22.주님의뜻안에가는길에",
@@ -74,4 +82,9 @@ export const pastors: IHymn[] = [
   { src: "프린트_007.jpg", title: "34.좋으신하나님", isMulti: 2 },
   { src: "프린트_007-1.jpg", title: "34.좋으신하나님" },
   { src: "프린트_008.jpg", title: "35.아멘아멘아멘" },
+  {
+    src: "프린트_058.jpg",
+    title: "36.주님사랑(들으소서)",
+    song: "예수사랑(들으소서).m4a",
+  },
 ];
