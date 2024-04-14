@@ -42,7 +42,7 @@ export const prints: IHymn[] = [
   { src: "프린트_019.jpg", title: "19.영광의나라" },
   { src: "프린트_020.jpg", title: "20.당신을축복합니다" },
   { src: "프린트_021.jpg", title: "21.보소서내마음을", song: "보소서.m4a" },
-  { src: "프린트_022.jpg", title: "22.이세상사는동안" },
+  { src: "프린트_022.jpg", title: "22.이세상사는동안", isHomework: true },
   { src: "프린트_023.jpg", title: "23.주가일하시네" },
   {
     src: "프린트_024.jpg",
