@@ -8,3 +8,14 @@ export function formatDateTime(date: Date) {
 
   return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
 }
+
+export function getPersonOfTheWeek(names: string[]) {
+  const currentDate: Date = new Date();
+  const startOfYear: Date = new Date(currentDate.getFullYear(), 0, 1); // 1월 1일
+  const pastDays: number = Math.floor(
+    (currentDate.getTime() - startOfYear.getTime()) / (24 * 3600 * 1000),
+  );
+  const currentWeek: number = Math.floor(pastDays / 7);
+
+  return names[currentWeek % names.length];
+}

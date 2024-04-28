@@ -3,9 +3,12 @@ import React from "react";
 import { Box, IconButton } from "@chakra-ui/react";
 import { WarningIcon } from "@chakra-ui/icons";
 import { useHomeworkStore } from "@/store/homework-store";
+import { getPersonOfTheWeek } from "@/util/date-util";
 
 export default function HomeWork() {
-  const { isHomework, setIsHomework } = useHomeworkStore((state) => state);
+  const { isHomework, setIsHomework, recycling, dishWashing } =
+    useHomeworkStore((state) => state);
+
   return (
     <>
       <Box
@@ -35,18 +38,29 @@ export default function HomeWork() {
           padding="1rem"
           background="red.200"
           whiteSpace="pre-line"
+          height="300px"
+          overflow="auto"
           borderRadius={8}
         >
-          {`4월 14일 숙제
-            - 암송 : 시127:1, 잠16:9
-            - 찬송 : 찬214, 프22 
+          {`5월 5일 봉사담당자
+          재활용 : ${getPersonOfTheWeek(recycling)} 형제
+          설거지 : ${getPersonOfTheWeek(dishWashing)} 자매
+          
+          4월 28일 숙제
+            - 암송 : 시126:5
+            - 찬송 : 찬415, 찬135
             - 읽기 : 구약3장, 신약3장
-            
+          
           4월 21일 숙제
             - 암송 : 빌2:13, 시127:1~2
             - 찬송 : 복1009, 프29 
             - 읽기 : 구약3장, 신약3장
             * 믿음의 소원 편지 (청년만 해당)
+          
+          4월 14일 숙제
+            - 암송 : 시127:1, 잠16:9
+            - 찬송 : 찬214, 프22 
+            - 읽기 : 구약3장, 신약3장 
             `}
         </Box>
       )}
