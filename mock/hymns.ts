@@ -344,7 +344,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_214.jpg",
     title: "214.나주의도움받고자",
     song: "나주의도움받고자.m4a",
-    isHomework: true,
   },
   { src: "새찬송가반주용(A4사이즈)_215.jpg", title: "215.내죄속해주신주께" },
   { src: "새찬송가반주용(A4사이즈)_216.jpg", title: "216.성자의귀한몸" },

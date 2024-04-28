@@ -2,6 +2,7 @@ import { Box } from "@chakra-ui/react";
 import SearchGrid from "@/components/SearchGrid";
 import { MOCKS_BY_PAGE_TYPES } from "@/variables/constants";
 import styles from "@/app/page.module.css";
+import { formatDateTime } from "@/util/date-util";
 
 interface IHymnPage {
   params: {
@@ -10,6 +11,8 @@ interface IHymnPage {
 }
 
 export default function HymnPage({ params }: IHymnPage) {
+  console.log("Hymn", formatDateTime(new Date()));
+
   const [tab, hymnNumber] = params?.hymn;
 
   // @ts-ignore

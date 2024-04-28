@@ -45,7 +45,6 @@ export const prints: IHymn[] = [
   {
     src: "프린트_022.jpg",
     title: "22.이세상사는동안",
-    isHomework: true,
     song: "이세상사는동안.m4a",
   },
   { src: "프린트_023.jpg", title: "23.주가일하시네" },
