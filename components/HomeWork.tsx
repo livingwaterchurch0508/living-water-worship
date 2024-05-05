@@ -46,6 +46,11 @@ export default function HomeWork() {
           재활용 : ${getPersonOfTheWeek(recycling)} 형제
           설거지 : ${getPersonOfTheWeek(dishWashing)} 자매
           
+          5월 5일 숙제
+            - 암송 : 시126:5~6 시127:1~2
+            - 찬송 : 복 1601, 찬 321
+            - 읽기 : 구약3장, 신약3장
+          
           4월 28일 숙제
             - 암송 : 시126:5
             - 찬송 : 찬415, 찬135
