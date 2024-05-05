@@ -41,8 +41,9 @@ export default function HomeWork() {
           height="300px"
           overflow="auto"
           borderRadius={8}
+          style={{ scrollbarWidth: "thin" }}
         >
-          {`5월 5일 봉사담당자
+          {`5월 12일 봉사담당자
           재활용 : ${getPersonOfTheWeek(recycling)} 형제
           설거지 : ${getPersonOfTheWeek(dishWashing)} 자매
           

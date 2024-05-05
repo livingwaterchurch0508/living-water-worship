@@ -11,7 +11,7 @@ export function formatDateTime(date: Date) {
 
 export function getPersonOfTheWeek(names: string[]) {
   const currentDate: Date = new Date();
-  const startOfYear: Date = new Date(currentDate.getFullYear(), 0, 1); // 1월 1일
+  const startOfYear: Date = new Date(currentDate.getFullYear(), 3, 22); // 1월 1일
   const pastDays: number = Math.floor(
     (currentDate.getTime() - startOfYear.getTime()) / (24 * 3600 * 1000),
   );
