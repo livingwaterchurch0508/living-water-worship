@@ -3,7 +3,7 @@ import React from "react";
 import { Box, IconButton } from "@chakra-ui/react";
 import { WarningIcon } from "@chakra-ui/icons";
 import { useHomeworkStore } from "@/store/homework-store";
-import { getPersonOfTheWeek } from "@/util/date-util";
+import { getPersonOfTheWeek, getSundayOfCurrentWeek } from "@/util/date-util";
 
 export default function HomeWork() {
   const { isHomework, setIsHomework, recycling, dishWashing } =
@@ -43,10 +43,13 @@ export default function HomeWork() {
           borderRadius={8}
           style={{ scrollbarWidth: "thin" }}
         >
-          {`5월 19일 봉사담당자
+          <Box padding="1rem" background="red.100" borderRadius={8}>
+            {`${getSundayOfCurrentWeek()} 봉사담당자
           재활용 : ${getPersonOfTheWeek(recycling)} 형제
           설거지 : ${getPersonOfTheWeek(dishWashing)} 자매
-          
+                    `}
+          </Box>
+          {`
           5월 12일 숙제
             - 숙제 : 하나님이 자기에게 이루실 기쁨의 단, 새 일이 무엇일까 써오기
             - 읽기 : 구약3장, 신약3장

@@ -19,3 +19,15 @@ export function getPersonOfTheWeek(names: string[]) {
 
   return names[currentWeek % names.length];
 }
+
+export function getSundayOfCurrentWeek() {
+  const today = new Date();
+  const dayOfWeek = today.getDay(); // 0 (일요일)부터 6 (토요일)까지의 값을 반환합니다.
+  const diffToSunday = 7 - dayOfWeek; // 오늘로부터 다음 일요일까지의 날짜 차이를 계산합니다.
+  const sunday = new Date(today);
+  sunday.setDate(today.getDate() + diffToSunday);
+  const month = String(sunday.getMonth() + 1);
+  const day = String(sunday.getDate()).padStart(2, "0");
+
+  return `${month}월 ${day}일`;
+}
