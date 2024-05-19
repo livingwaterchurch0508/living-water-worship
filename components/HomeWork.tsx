@@ -2,6 +2,8 @@
 import React from "react";
 import { Box, IconButton } from "@chakra-ui/react";
 import { WarningIcon } from "@chakra-ui/icons";
+
+import { H_2024 } from "@/mock/homeworks";
 import { useHomeworkStore } from "@/store/homework-store";
 import { getPersonOfTheWeek, getSundayOfCurrentWeek } from "@/util/date-util";
 
@@ -49,32 +51,7 @@ export default function HomeWork() {
           설거지 : ${getPersonOfTheWeek(dishWashing)} 자매
                     `}
           </Box>
-          {`
-          5월 12일 숙제
-            - 숙제 : 하나님이 자기에게 이루실 기쁨의 단, 새 일이 무엇일까 써오기
-            - 읽기 : 구약3장, 신약3장
-          
-          5월 5일 숙제
-            - 암송 : 시126:5~6 시127:1~2
-            - 찬송 : 복 1601, 찬 321
-            - 읽기 : 구약3장, 신약3장
-          
-          4월 28일 숙제
-            - 암송 : 시126:5
-            - 찬송 : 찬415, 찬135
-            - 읽기 : 구약3장, 신약3장
-          
-          4월 21일 숙제
-            - 암송 : 빌2:13, 시127:1~2
-            - 찬송 : 복1009, 프29 
-            - 읽기 : 구약3장, 신약3장
-            * 믿음의 소원 편지 (청년만 해당)
-          
-          4월 14일 숙제
-            - 암송 : 시127:1, 잠16:9
-            - 찬송 : 찬214, 프22 
-            - 읽기 : 구약3장, 신약3장 
-            `}
+          {H_2024}
         </Box>
       )}
     </>
