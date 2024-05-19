@@ -719,6 +719,7 @@ export const hymns: IHymn[] = [
   {
     src: "새찬송가반주용(A4사이즈)_393.jpg",
     title: "393.오신실하신주",
+    song: "오신실하신주.m4a",
     isHomework: true,
   },
   { src: "새찬송가반주용(A4사이즈)_394.jpg", title: "394.이세상의친구들" },
