@@ -720,7 +720,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_393.jpg",
     title: "393.오신실하신주",
     song: "오신실하신주.m4a",
-    isHomework: true,
   },
   { src: "새찬송가반주용(A4사이즈)_394.jpg", title: "394.이세상의친구들" },
   { src: "새찬송가반주용(A4사이즈)_395.jpg", title: "395.자비하신예수여" },
@@ -838,7 +837,11 @@ export const hymns: IHymn[] = [
     title: "445.태산을넘어험곡에가도",
   },
   { src: "새찬송가반주용(A4사이즈)_446.jpg", title: "446.주음성외에는" },
-  { src: "새찬송가반주용(A4사이즈)_447.jpg", title: "447.이세상끝날까지" },
+  {
+    src: "새찬송가반주용(A4사이즈)_447.jpg",
+    title: "447.이세상끝날까지",
+    isHomework: true,
+  },
   { src: "새찬송가반주용(A4사이즈)_448.jpg", title: "448.주님가신길을따라" },
   {
     src: "새찬송가반주용(A4사이즈)_449.jpg",

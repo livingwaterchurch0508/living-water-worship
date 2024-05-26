@@ -43,6 +43,7 @@ export const michaels: IHymn[] = [
     src: "주나의모든것.jpg",
     title: "1530. 주나의모든것",
     song: "1530주나의모든것약할때강함되시네.m4a",
+    isHomework: true,
   },
   {
     src: "약한나를강하게.jpg",
