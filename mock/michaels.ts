@@ -43,7 +43,6 @@ export const michaels: IHymn[] = [
     src: "주나의모든것.jpg",
     title: "1530. 주나의모든것",
     song: "1530주나의모든것약할때강함되시네.m4a",
-    isHomework: true,
   },
   {
     src: "약한나를강하게.jpg",
@@ -94,6 +93,7 @@ export const michaels: IHymn[] = [
     src: "십자가그사랑멀리떠나서.jpg",
     title: "1933. 십자가그사랑멀리떠나서",
     song: "십자가그사랑.m4a",
+    isHomework: true,
     isMulti: 2,
   },
   {
@@ -109,5 +109,25 @@ export const michaels: IHymn[] = [
     src: "560사랑하는나의아버지.jpg",
     title: "560. 사랑하는나의아버지",
     song: "사랑하는나의아버지.m4a",
+  },
+  {
+    src: "977주님내가여기있사오니.jpg",
+    title: "977. 주님내가여기있사오니",
+    song: "주님내가여기있사오니.m4a",
+  },
+  {
+    src: "주만바라볼지라(하나님의사랑을).jpg",
+    title: "1285 주만바라볼지라(하나님의사랑을)",
+    song: "주만바라볼지라(하나님의사랑을).m4a",
+  },
+  {
+    src: "내마음에주를향한사랑이.jpg",
+    title: "내마음에주를향한사랑이",
+    song: "내마음에주를향한사랑이.m4a",
+  },
+  {
+    src: "내영이주를.jpg",
+    title: "674 내영이주를",
+    song: "내영이주를.m4a",
   },
 ];
