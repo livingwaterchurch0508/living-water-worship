@@ -93,7 +93,6 @@ export const michaels: IHymn[] = [
     src: "십자가그사랑멀리떠나서.jpg",
     title: "1933. 십자가그사랑멀리떠나서",
     song: "십자가그사랑.m4a",
-    isHomework: true,
     isMulti: 2,
   },
   {
@@ -129,5 +128,10 @@ export const michaels: IHymn[] = [
     src: "내영이주를.jpg",
     title: "674 내영이주를",
     song: "내영이주를.m4a",
+  },
+  {
+    src: "1173아름다웠던지난추억들.jpg",
+    title: "1173 아름다웠던지난추억들",
+    song: "아름다웠던지난추억들.m4a",
   },
 ];
