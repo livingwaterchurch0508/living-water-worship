@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { Box, Button, Grid, GridItem } from "@chakra-ui/react";
+import { Box, Button, HStack } from "@chakra-ui/react";
+import { FixedSizeList as List, ListChildComponentProps } from "react-window";
 
 import { useSearchStore } from "@/store/search-store";
 import { useTabStore } from "@/store/tab-store";
@@ -34,6 +35,24 @@ export default function PlayList() {
     (state) => state,
   );
   const { browserHeight } = useDeviceStore((state) => state);
+  const [listHeight, setListHeight] = useState(0);
+
+  useEffect(() => {
+    const updateHeight = () => {
+      const calculatedHeight = window.innerHeight - 200; // 원하는 값을 조절하세요
+      setListHeight(calculatedHeight);
+    };
+
+    // 초기 높이 설정
+    updateHeight();
+
+    // 창 크기 변경 시 높이 업데이트
+    window.addEventListener("resize", updateHeight);
+
+    return () => {
+      window.removeEventListener("resize", updateHeight);
+    };
+  }, []);
 
   useEffect(() => {
     if (!search) {
@@ -75,6 +94,36 @@ export default function PlayList() {
     router.push(`/${tab}/${getNumberTitle(title)}`);
   };
 
+  const Row = ({ index, style }: ListChildComponentProps) => {
+    const item = filteredList[index];
+    const { title, isHomework = false, song = "", src, isMulti } = item;
+
+    return (
+      <HStack
+        bg={song ? "purple.100" : "gray.200"}
+        p={1}
+        key={`${title}_${index}`}
+        overflow="hidden"
+        display="flex"
+        style={style}
+      >
+        {enabledMultiSelect && (
+          <NumberCheckedBox
+            song={song}
+            src={`/${PATHS_BY_PAGE_TYPES[tab]}/${src}`}
+          />
+        )}
+        <Button
+          fontSize="xs"
+          w="100%"
+          onClick={(e) => handleLinkClick(e, { song, src, isMulti }, title)}
+        >
+          {isHomework ? `(*숙제)${title}` : title}
+        </Button>
+      </HStack>
+    );
+  };
+
   return (
     <Box
       position="fixed"
@@ -86,47 +135,14 @@ export default function PlayList() {
       overflow="auto"
       className={styles.grid}
     >
-      <Grid
+      <List
+        height={listHeight} // 고정 높이 (예제에 맞게 조절)
+        itemCount={filteredList.length}
+        itemSize={48} // 각 아이템의 높이
         width="calc(100vw - 4rem)"
-        templateColumns={"repeat(1, 1fr)"}
-        gap={1}
       >
-        {filteredList
-          .filter((item) => {
-            if (enabledMultiSelect) {
-              return !!item.song;
-            }
-            return true;
-          })
-          .map(
-            ({ title, isHomework = false, song = "", src, isMulti }, idx) => (
-              <GridItem
-                bg={song ? "purple.100" : "gray.200"}
-                p={1}
-                key={`${title}_${idx}`}
-                overflow="hidden"
-                display="flex"
-                gap={4}
-              >
-                {enabledMultiSelect && (
-                  <NumberCheckedBox
-                    song={song}
-                    src={`/${PATHS_BY_PAGE_TYPES[tab]}/${src}`}
-                  />
-                )}
-                <Button
-                  fontSize="xs"
-                  w="100%"
-                  onClick={(e) =>
-                    handleLinkClick(e, { song, src, isMulti }, title)
-                  }
-                >
-                  {isHomework ? `(*숙제)${title}` : title}
-                </Button>
-              </GridItem>
-            ),
-          )}
-      </Grid>
+        {Row}
+      </List>
     </Box>
   );
 }
