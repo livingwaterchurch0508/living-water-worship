@@ -134,4 +134,10 @@ export const michaels: IHymn[] = [
     title: "1173 아름다웠던지난추억들",
     song: "아름다웠던지난추억들.m4a",
   },
+  {
+    src: "죄많은이세상은.jpg",
+    title: "958 죄많은이세상은",
+    song: "죄많은이세상은.m4a",
+    isHomework: true,
+  },
 ];
