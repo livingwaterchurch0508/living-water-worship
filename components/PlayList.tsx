@@ -7,7 +7,6 @@ import { FixedSizeList as List, ListChildComponentProps } from "react-window";
 
 import { useSearchStore } from "@/store/search-store";
 import { useTabStore } from "@/store/tab-store";
-import { useHymnStore } from "@/store/hymn-store";
 import { useSortStore } from "@/store/sort-store";
 import { usePressStore } from "@/store/press-store";
 import { arraySort } from "@/util/array-util";
@@ -27,7 +26,6 @@ export default function PlayList() {
   const { search } = useSearchStore((state) => state);
   const { tab } = useTabStore((state) => state);
   const { sort } = useSortStore((state) => state);
-  const { isHymn } = useHymnStore((state) => state);
   const { filteredList, setFilteredList } = useFilteredListStore(
     (state) => state,
   );
@@ -56,7 +54,9 @@ export default function PlayList() {
 
   useEffect(() => {
     if (!search) {
-      setFilteredList(arraySort(MOCKS_BY_PAGE_TYPES[tab], sort, isHymn));
+      setFilteredList(
+        arraySort(MOCKS_BY_PAGE_TYPES[tab], sort, enabledMultiSelect),
+      );
       return;
     }
 
@@ -66,10 +66,10 @@ export default function PlayList() {
           includeByCho(search, title),
         ),
         sort,
-        isHymn,
+        enabledMultiSelect,
       ),
     );
-  }, [search, tab]);
+  }, [search, tab, enabledMultiSelect]);
 
   function getNumberTitle(title: string) {
     const [hymnTitle] = title.split(".");
