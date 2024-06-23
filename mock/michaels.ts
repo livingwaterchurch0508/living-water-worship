@@ -14,6 +14,7 @@ export const michaels: IHymn[] = [
     title: "2066. 전능하신나의주하나님",
     song: "전능하신나의주하나님은.m4a",
     isMulti: 2,
+    isHomework: true,
   },
   {
     src: "전능하신나의주하나님-1.jpg",
@@ -53,6 +54,7 @@ export const michaels: IHymn[] = [
     src: "사명.jpg",
     title: "2068. 사명",
     song: "사명.m4a",
+    isHomework: true,
   },
   {
     src: "주님보좌앞에나아가.jpg",
@@ -138,6 +140,15 @@ export const michaels: IHymn[] = [
     src: "죄많은이세상은.jpg",
     title: "958 죄많은이세상은",
     song: "죄많은이세상은.m4a",
-    isHomework: true,
+  },
+  {
+    src: "1977야곱의축복.jpg",
+    title: "1733 너는담장너머로(야곱의축복)",
+    song: "죄많은이세상은.m4a",
+    isMulti: 2,
+  },
+  {
+    src: "1977야곱의축복-1.jpg",
+    title: "1733 너는담장너머로(야곱의축복)",
   },
 ];
