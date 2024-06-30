@@ -10,8 +10,8 @@ interface IHomeworkState {
 const useHomeworkStore = create<IHomeworkState>((set) => ({
   isHomework: false,
   setIsHomework: (isHomework) => set({ isHomework }),
-  recycling: ["김봉우", "김축복", "오민혁", "황지민"],
-  dishWashing: ["오예민", "한혜리"],
+  recycling: ["김봉우", "김축복", "오민혁"],
+  dishWashing: ["오예민", "한혜리", "한채리"],
 }));
 
 export { useHomeworkStore };
