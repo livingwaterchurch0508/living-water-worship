@@ -75,6 +75,7 @@ export default function xMultiAudioItem() {
           }
         />
         <audio
+          loop={checkedItems.length === 1}
           autoPlay
           controls
           ref={audioRef}
