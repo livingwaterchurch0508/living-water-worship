@@ -38,6 +38,7 @@ export const michaels: IHymn[] = [
     src: "날마다숨쉬는순간마다.jpg",
     title: "1009. 날마다숨쉬는순간마다",
     song: "1009날마다숨쉬는순간마다.m4a",
+    isHomework: true,
   },
   {
     src: "주나의모든것.jpg",
@@ -168,6 +169,5 @@ export const michaels: IHymn[] = [
     src: "나의안에거하라.jpg",
     title: "2081. 나의안에거하라",
     song: "나의안에거하라.m4a",
-    isHomework: true,
   },
 ];
