@@ -319,6 +319,7 @@ export const hymns: IHymn[] = [
   {
     src: "새찬송가반주용(A4사이즈)_191.jpg",
     title: "191.내가매일기쁘게",
+    song: "내가매일기쁘게.m4a",
     isHomework: true,
   },
   { src: "새찬송가반주용(A4사이즈)_192.jpg", title: "192.임하소서임하소서" },
