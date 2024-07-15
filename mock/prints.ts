@@ -86,7 +86,11 @@ export const prints: IHymn[] = [
     song: "주의도를버리고.m4a",
   },
   { src: "프린트_044.jpg", title: "44.나는순례자", song: "나는순례자.m4a" },
-  { src: "프린트_045.jpg", title: "45.주님나를부르시니(물위를걷는자)" },
+  {
+    src: "프린트_045.jpg",
+    title: "45.주님나를부르시니(물위를걷는자)",
+    song: "주님나를부르시니.m4a",
+  },
   {
     src: "프린트_046.jpg",
     title: "46.하나님의부르심",
