@@ -19,8 +19,7 @@ export default function Help() {
       >
         <IconButton
           isRound={true}
-          variant="solid"
-          colorScheme="teal"
+          colorScheme="blackAlpha"
           aria-label="Done"
           fontSize="20px"
           icon={<QuestionIcon />}

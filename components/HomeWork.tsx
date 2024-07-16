@@ -5,11 +5,9 @@ import { WarningIcon } from "@chakra-ui/icons";
 
 import { H_2024 } from "@/mock/homeworks";
 import { useHomeworkStore } from "@/store/homework-store";
-import { getPersonOfTheWeek, getSundayOfCurrentWeek } from "@/util/date-util";
 
 export default function HomeWork() {
-  const { isHomework, setIsHomework, recycling, dishWashing } =
-    useHomeworkStore((state) => state);
+  const { isHomework, setIsHomework } = useHomeworkStore((state) => state);
 
   return (
     <>
@@ -23,8 +21,7 @@ export default function HomeWork() {
       >
         <IconButton
           isRound={true}
-          variant="solid"
-          colorScheme="teal"
+          colorScheme="blackAlpha"
           aria-label="Done"
           fontSize="20px"
           icon={<WarningIcon />}
@@ -35,22 +32,16 @@ export default function HomeWork() {
         <Box
           position="fixed"
           right="2rem"
-          bottom="calc(2rem + 50px)"
+          bottom="calc(2rem + 44px)"
           width="18rem"
           padding="1rem"
-          background="red.200"
+          bg="pink"
           whiteSpace="pre-line"
           height="300px"
           overflow="auto"
           borderRadius={8}
           style={{ scrollbarWidth: "thin" }}
         >
-          <Box padding="1rem" background="red.100" borderRadius={8}>
-            {`${getSundayOfCurrentWeek()} 봉사담당자
-          재활용 : ${getPersonOfTheWeek(recycling)} 형제
-          설거지 : ${getPersonOfTheWeek(dishWashing)} 자매
-                    `}
-          </Box>
           {H_2024}
         </Box>
       )}

@@ -36,7 +36,7 @@ export default function PlayButton() {
       alignItems="center"
       gap="1rem"
     >
-      <Button colorScheme="green" size="sm" onClick={handlePlay}>
+      <Button bg="#fce0e2" size="sm" onClick={handlePlay}>
         재생하기
       </Button>
       <Button

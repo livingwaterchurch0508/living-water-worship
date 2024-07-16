@@ -13,6 +13,19 @@ function homeworkSort(array: IHymn[]) {
   );
 }
 
+function thisWeekSort(array: IHymn[]) {
+  return array.sort(
+    (
+      { isThisWeek: aIsThisWeek = false },
+      { isThisWeek: bIsThisWeek = false },
+    ) => {
+      if (aIsThisWeek > bIsThisWeek) return -1;
+
+      return 0;
+    },
+  );
+}
+
 function koreanSort(array: IHymn[], order: SORT_TYPES) {
   const sortedArray = array.sort(({ title: aTitle }, { title: bTitle }) =>
     aTitle.split(".")[1].localeCompare(bTitle.split(".")[1]),
@@ -51,10 +64,10 @@ function filterIsHymn(array: IHymn[], isHymn: boolean) {
 export function arraySort(array: IHymn[], order: SORT_TYPES, isHymn: boolean) {
   if (order === SORT_TYPES.NUMBER_ASC || order === SORT_TYPES.NUMBER_DESC) {
     return homeworkSort(
-      numberSort(filterMulti(filterIsHymn(array, isHymn)), order),
+      thisWeekSort(numberSort(filterMulti(filterIsHymn(array, isHymn)), order)),
     );
   }
   return homeworkSort(
-    koreanSort(filterMulti(filterIsHymn(array, isHymn)), order),
+    thisWeekSort(koreanSort(filterMulti(filterIsHymn(array, isHymn)), order)),
   );
 }

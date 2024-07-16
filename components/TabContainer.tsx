@@ -41,7 +41,7 @@ export default function TabContainer({ children }: { children: ReactNode }) {
         left="0"
         right="0"
         variant="soft-rounded"
-        colorScheme="green"
+        colorScheme="blackAlpha"
         onChange={(index) => {
           setSearch("");
           setTab(index);

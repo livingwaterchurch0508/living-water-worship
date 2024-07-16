@@ -3,6 +3,7 @@ interface IHymn {
   title: string;
   isMulti?: number;
   isHomework?: boolean;
+  isThisWeek?: boolean;
   song?: string;
 }
 

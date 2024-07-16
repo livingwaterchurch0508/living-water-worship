@@ -19,7 +19,7 @@ export default function MultiSelectButton() {
       gap="1rem"
     >
       <Button
-        colorScheme="green"
+        colorScheme="gray"
         size="sm"
         onClick={() => setEnabledMultiSelect(true)}
       >

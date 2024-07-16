@@ -96,11 +96,17 @@ export default function PlayList() {
 
   const Row = ({ index, style }: ListChildComponentProps) => {
     const item = filteredList[index];
-    const { title, isHomework = false, song = "", src, isMulti } = item;
+    const {
+      title,
+      isHomework = false,
+      isThisWeek = false,
+      song = "",
+      src,
+      isMulti,
+    } = item;
 
     return (
       <HStack
-        bg={song ? "purple.100" : "gray.200"}
         p={1}
         key={`${title}_${index}`}
         overflow="hidden"
@@ -117,6 +123,9 @@ export default function PlayList() {
           fontSize="xs"
           w="100%"
           onClick={(e) => handleLinkClick(e, { song, src, isMulti }, title)}
+          bg={
+            isHomework || isThisWeek ? "#dfd3e4" : song ? "#fce0e2" : "gray.200"
+          }
         >
           {isHomework ? `(*숙제)${title}` : title}
         </Button>
