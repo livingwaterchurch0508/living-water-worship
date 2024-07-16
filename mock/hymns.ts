@@ -321,6 +321,7 @@ export const hymns: IHymn[] = [
     title: "191.내가매일기쁘게",
     song: "내가매일기쁘게.m4a",
     isHomework: true,
+    isThisWeek: true,
   },
   { src: "새찬송가반주용(A4사이즈)_192.jpg", title: "192.임하소서임하소서" },
   {
@@ -809,6 +810,7 @@ export const hymns: IHymn[] = [
     title: "421.내가예수믿고서",
     song: "내가예수믿고서.m4a",
     isHomework: true,
+    isThisWeek: true,
   },
   { src: "새찬송가반주용(A4사이즈)_422.jpg", title: "422.거룩하게하소서" },
   { src: "새찬송가반주용(A4사이즈)_423.jpg", title: "423.먹보다도더검은" },

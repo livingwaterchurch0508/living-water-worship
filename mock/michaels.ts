@@ -113,6 +113,7 @@ export const michaels: IHymn[] = [
     src: "977주님내가여기있사오니.jpg",
     title: "977. 주님내가여기있사오니",
     song: "주님내가여기있사오니.m4a",
+    isThisWeek: true,
   },
   {
     src: "주만바라볼지라(하나님의사랑을).jpg",
@@ -178,12 +179,14 @@ export const michaels: IHymn[] = [
     src: "여호와우리주여(시편8편).jpg",
     title: "577. 여호와우리주여(시편8편)",
     song: "여호와우리주여.m4a",
+    isThisWeek: true,
   },
   {
     src: "나의하나님.jpg",
     title: "1736. 나의하나님",
     song: "나의하나님그크신.m4a",
     isMulti: 2,
+    isThisWeek: true,
   },
   { src: "나의하나님-1.jpg", title: "1736. 나의하나님" },
 ];
