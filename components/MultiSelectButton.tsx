@@ -5,41 +5,40 @@ import { Box, Button } from "@chakra-ui/react";
 import { useRouter } from "next/navigation";
 
 import { usePressStore } from "@/store/press-store";
+import { homeworkSort } from "@/util/array-util";
 import { TAB_TYPES } from "@/variables/enums";
+import { PATHS_BY_PAGE_TYPES } from "@/variables/constants";
 import { hymns } from "@/mock/hymns";
+import { prints } from "@/mock/prints";
 import { pastors } from "@/mock/pastors";
 import { michaels } from "@/mock/michaels";
-import { prints } from "@/mock/prints";
 
 export default function MultiSelectButton() {
   const router = useRouter();
 
   const { setEnabledMultiSelect } = usePressStore((state) => state);
-  const { allCheckedItems, clearCheckedItems } = usePressStore(
-    (state) => state,
-  );
+  const { thisWeekItems, clearCheckedItems } = usePressStore((state) => state);
 
   const playThisWeek = () => {
-    allCheckedItems({
-      filteredList: hymns.filter(({ isThisWeek = false }) => isThisWeek),
-      isAllChecked: true,
-      tab: TAB_TYPES.HYMNS,
-    });
-    allCheckedItems({
-      filteredList: pastors.filter(({ isThisWeek = false }) => isThisWeek),
-      isAllChecked: true,
-      tab: TAB_TYPES.PASTOR,
-    });
-    allCheckedItems({
-      filteredList: michaels.filter(({ isThisWeek = false }) => isThisWeek),
-      isAllChecked: true,
-      tab: TAB_TYPES.MICHAELS,
-    });
-    allCheckedItems({
-      filteredList: prints.filter(({ isThisWeek = false }) => isThisWeek),
-      isAllChecked: true,
-      tab: TAB_TYPES.PRINTS,
-    });
+    const getThisHymns = (mock: IHymn[], tab: TAB_TYPES): ICheckedBoxItem[] => {
+      return mock
+        .filter(({ isThisWeek = false }) => isThisWeek)
+        .map(({ song, src, isMulti, isHomework }) => ({
+          song: song!,
+          isMulti,
+          src: `/${PATHS_BY_PAGE_TYPES[tab]}/${src}`,
+          isHomework,
+        }));
+    };
+    thisWeekItems(
+      homeworkSort([
+        ...getThisHymns(hymns, TAB_TYPES.HYMNS),
+        ...getThisHymns(prints, TAB_TYPES.PRINTS),
+        ...getThisHymns(pastors, TAB_TYPES.PASTOR),
+        ...getThisHymns(michaels, TAB_TYPES.MICHAELS),
+      ]) as ICheckedBoxItem[],
+    );
+
     setTimeout(() => {
       router.push("/multi/play");
     }, 200);

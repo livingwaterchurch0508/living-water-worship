@@ -1,6 +1,6 @@
 import { SORT_TYPES } from "@/variables/enums";
 
-function homeworkSort(array: IHymn[]) {
+export function homeworkSort(array: IHymn[] | ICheckedBoxItem[]) {
   return array.sort(
     (
       { isHomework: aIsHomework = false },

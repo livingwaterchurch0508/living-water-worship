@@ -11,4 +11,5 @@ interface ICheckedBoxItem {
   song: string;
   src: string;
   isMulti?: number;
+  isHomework?: boolean;
 }
