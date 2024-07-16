@@ -15,7 +15,9 @@ export default function MultiSelectButton() {
   const router = useRouter();
 
   const { setEnabledMultiSelect } = usePressStore((state) => state);
-  const { allCheckedItems } = usePressStore((state) => state);
+  const { allCheckedItems, clearCheckedItems } = usePressStore(
+    (state) => state,
+  );
 
   const playThisWeek = () => {
     allCheckedItems({
@@ -60,7 +62,10 @@ export default function MultiSelectButton() {
       <Button
         colorScheme="gray"
         size="sm"
-        onClick={() => setEnabledMultiSelect(true)}
+        onClick={() => {
+          clearCheckedItems();
+          setEnabledMultiSelect(true);
+        }}
       >
         여러개 선택하기
       </Button>
