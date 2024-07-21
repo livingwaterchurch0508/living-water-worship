@@ -980,6 +980,7 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_491.jpg",
     title: "491.저높은곳을향하여",
     song: "저높은곳을향하여.m4a",
+    isThisWeek: true,
   },
   {
     src: "새찬송가반주용(A4사이즈)_492.jpg",

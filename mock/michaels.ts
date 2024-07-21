@@ -186,4 +186,12 @@ export const michaels: IHymn[] = [
     isMulti: 2,
   },
   { src: "나의하나님-1.jpg", title: "1736. 나의하나님" },
+  {
+    src: "회복.jpg",
+    title: "1921. 회복",
+    isMulti: 2,
+    song: "회복.m4a",
+    isThisWeek: true,
+  },
+  { src: "회복-1.jpg", title: "1921. 회복" },
 ];
