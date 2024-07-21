@@ -66,6 +66,8 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_32.jpg",
     title: "32.만유의주재",
     song: "만유의주재.m4a",
+    isThisWeek: true,
+    isHomework: true,
   },
   { src: "새찬송가반주용(A4사이즈)_33.jpg", title: "33.영광스런주를보라" },
   {
@@ -320,8 +322,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_191.jpg",
     title: "191.내가매일기쁘게",
     song: "내가매일기쁘게.m4a",
-    isHomework: true,
-    isThisWeek: true,
   },
   { src: "새찬송가반주용(A4사이즈)_192.jpg", title: "192.임하소서임하소서" },
   {
@@ -607,6 +607,8 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_321.jpg",
     title: "321.날대속하신예수께",
     song: "날대속하신예수께.m4a",
+    isThisWeek: true,
+    isHomework: true,
   },
   {
     src: "새찬송가반주용(A4사이즈)_322.jpg",
@@ -809,8 +811,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_421.jpg",
     title: "421.내가예수믿고서",
     song: "내가예수믿고서.m4a",
-    isHomework: true,
-    isThisWeek: true,
   },
   { src: "새찬송가반주용(A4사이즈)_422.jpg", title: "422.거룩하게하소서" },
   { src: "새찬송가반주용(A4사이즈)_423.jpg", title: "423.먹보다도더검은" },
