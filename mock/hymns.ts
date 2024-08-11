@@ -66,8 +66,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_32.jpg",
     title: "32.만유의주재",
     song: "만유의주재.m4a",
-    isThisWeek: true,
-    isHomework: true,
   },
   { src: "새찬송가반주용(A4사이즈)_33.jpg", title: "33.영광스런주를보라" },
   {
@@ -536,6 +534,8 @@ export const hymns: IHymn[] = [
   {
     src: "새찬송가반주용(A4사이즈)_289.jpg",
     title: "289.주예수내맘에들어와",
+    isThisWeek: true,
+    isHomework: true,
   },
   {
     src: "새찬송가반주용(A4사이즈)_290.jpg",
@@ -607,8 +607,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_321.jpg",
     title: "321.날대속하신예수께",
     song: "날대속하신예수께.m4a",
-    isThisWeek: true,
-    isHomework: true,
   },
   {
     src: "새찬송가반주용(A4사이즈)_322.jpg",
@@ -879,6 +877,8 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_447.jpg",
     title: "447.이세상끝날까지",
     song: "이세상끝날까지.m4a",
+    isThisWeek: true,
+    isHomework: true,
   },
   { src: "새찬송가반주용(A4사이즈)_448.jpg", title: "448.주님가신길을따라" },
   {
@@ -980,7 +980,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_491.jpg",
     title: "491.저높은곳을향하여",
     song: "저높은곳을향하여.m4a",
-    isThisWeek: true,
   },
   {
     src: "새찬송가반주용(A4사이즈)_492.jpg",

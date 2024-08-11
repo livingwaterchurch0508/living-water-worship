@@ -191,7 +191,6 @@ export const michaels: IHymn[] = [
     title: "1921. 회복",
     isMulti: 2,
     song: "회복.m4a",
-    isThisWeek: true,
   },
   { src: "회복-1.jpg", title: "1921. 회복" },
 ];
