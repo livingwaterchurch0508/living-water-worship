@@ -78,7 +78,12 @@ export const hymns: IHymn[] = [
     song: "큰영화로신주.m4a",
   },
   { src: "새찬송가반주용(A4사이즈)_36.jpg", title: "36.주예수이름높이어" },
-  { src: "새찬송가반주용(A4사이즈)_37.jpg", title: "37.주예수이름높이어" },
+  {
+    src: "새찬송가반주용(A4사이즈)_37.jpg",
+    title: "37.주예수이름높이어",
+    song: "37주예수이름높이어.m4a",
+    isThisWeek: true,
+  },
   { src: "새찬송가반주용(A4사이즈)_38.jpg", title: "38.예수우리왕이여" },
   { src: "새찬송가반주용(A4사이즈)_39.jpg", title: "39.주은혜를받으려" },
   {
@@ -534,6 +539,7 @@ export const hymns: IHymn[] = [
   {
     src: "새찬송가반주용(A4사이즈)_289.jpg",
     title: "289.주예수내맘에들어와",
+    song: "주예수내맘에들어와.m4a",
     isThisWeek: true,
     isHomework: true,
   },
