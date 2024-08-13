@@ -40,6 +40,7 @@ export default function HomeWork() {
           height="300px"
           overflow="auto"
           borderRadius={8}
+          textAlign="start"
           style={{ scrollbarWidth: "thin" }}
         >
           {H_2024}
