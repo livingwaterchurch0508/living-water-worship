@@ -178,6 +178,7 @@ export const michaels: IHymn[] = [
     src: "여호와우리주여(시편8편).jpg",
     title: "577. 여호와우리주여(시편8편)",
     song: "여호와우리주여.m4a",
+    isThisWeek: true,
   },
   {
     src: "나의하나님.jpg",
