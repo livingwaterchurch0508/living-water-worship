@@ -50,7 +50,6 @@ export const prints: IHymn[] = [
     src: "프린트_022.jpg",
     title: "22.이세상사는동안",
     song: "이세상사는동안.m4a",
-    isThisWeek: true,
   },
   { src: "프린트_023.jpg", title: "23.주가일하시네" },
   {
@@ -121,7 +120,6 @@ export const prints: IHymn[] = [
     src: "프린트_055.jpg",
     title: "55.이몸을받아주소서",
     song: "이몸을받아주소서.m4a",
-    isThisWeek: true,
   },
   {
     src: "프린트_056.jpg",

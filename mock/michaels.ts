@@ -178,7 +178,6 @@ export const michaels: IHymn[] = [
     src: "여호와우리주여(시편8편).jpg",
     title: "577. 여호와우리주여(시편8편)",
     song: "여호와우리주여.m4a",
-    isThisWeek: true,
   },
   {
     src: "나의하나님.jpg",
@@ -194,4 +193,10 @@ export const michaels: IHymn[] = [
     song: "회복.m4a",
   },
   { src: "회복-1.jpg", title: "1921. 회복" },
+  {
+    src: "나.jpg",
+    title: "968. 나",
+    song: "나.m4a",
+    isThisWeek: true,
+  },
 ];
