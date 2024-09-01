@@ -154,6 +154,7 @@ export const michaels: IHymn[] = [
     title: "1155. 목적도없이(험한십자가능력있네)",
     song: "목적도없이(험한십자가능력있네).m4a",
     isMulti: 2,
+    isThisWeek: true,
   },
   {
     src: "목적도없이(험한십자가능력있네)-1.jpg",
@@ -197,6 +198,11 @@ export const michaels: IHymn[] = [
     src: "나.jpg",
     title: "968. 나",
     song: "나.m4a",
+  },
+  {
+    src: "주품에.jpg",
+    title: "1874. 주품에",
+    song: "주품에.m4a",
     isThisWeek: true,
   },
 ];

@@ -66,7 +66,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_32.jpg",
     title: "32.만유의주재",
     song: "만유의주재.m4a",
-    isThisWeek: true,
   },
   { src: "새찬송가반주용(A4사이즈)_33.jpg", title: "33.영광스런주를보라" },
   {
@@ -547,6 +546,7 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_289.jpg",
     title: "289.주예수내맘에들어와",
     song: "주예수내맘에들어와.m4a",
+    isThisWeek: true,
   },
   {
     src: "새찬송가반주용(A4사이즈)_290.jpg",
@@ -713,8 +713,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_365.jpg",
     title: "365.마음속에근심있는사람",
     song: "마음속에근심있는사람.m4a",
-    isThisWeek: true,
-    isHomework: true,
   },
   { src: "새찬송가반주용(A4사이즈)_366.jpg", title: "366.어두운내눈밝히사" },
   {
@@ -908,7 +906,13 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_452.jpg",
     title: "452.내모든소원기도의제목",
   },
-  { src: "새찬송가반주용(A4사이즈)_453.jpg", title: "453.예수더알기원하네" },
+  {
+    src: "새찬송가반주용(A4사이즈)_453.jpg",
+    title: "453.예수더알기원하네",
+    song: "예수더알기원하네.m4a",
+    isThisWeek: true,
+    isHomework: true,
+  },
   { src: "새찬송가반주용(A4사이즈)_454.jpg", title: "454.주와같이되기를" },
   {
     src: "새찬송가반주용(A4사이즈)_455.jpg",
@@ -1039,7 +1043,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_508.jpg",
     title: "508.우리가지금은나그네되어도",
     song: "우리가지금은나그네되어도.m4a",
-    isThisWeek: true,
   },
   {
     src: "새찬송가반주용(A4사이즈)_509.jpg",
