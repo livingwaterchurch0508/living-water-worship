@@ -203,6 +203,20 @@ export const michaels: IHymn[] = [
     src: "주품에.jpg",
     title: "1874. 주품에",
     song: "주품에.m4a",
+  },
+  {
+    src: "여기에모인우리.jpg",
+    title: "1683. 여기에모인우리",
+    isMulti: 2,
+    song: "여기에모인우리.m4a",
+    isThisWeek: true,
+    isHomework: true,
+  },
+  { src: "여기에모인우리-1.jpg", title: "1683. 여기에모인우리" },
+  {
+    src: "주를향한나의사랑을.jpg",
+    title: "1807. 주를향한나의사랑을",
+    song: "주를향한나의사랑을.m4a",
     isThisWeek: true,
   },
 ];
