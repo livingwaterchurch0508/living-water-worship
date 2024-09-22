@@ -154,7 +154,6 @@ export const michaels: IHymn[] = [
     title: "1155. 목적도없이(험한십자가능력있네)",
     song: "목적도없이(험한십자가능력있네).m4a",
     isMulti: 2,
-    isThisWeek: true,
   },
   {
     src: "목적도없이(험한십자가능력있네)-1.jpg",
@@ -209,14 +208,16 @@ export const michaels: IHymn[] = [
     title: "1683. 여기에모인우리",
     isMulti: 2,
     song: "여기에모인우리.m4a",
-    isThisWeek: true,
-    isHomework: true,
   },
   { src: "여기에모인우리-1.jpg", title: "1683. 여기에모인우리" },
   {
     src: "주를향한나의사랑을.jpg",
     title: "1807. 주를향한나의사랑을",
     song: "주를향한나의사랑을.m4a",
-    isThisWeek: true,
+  },
+  {
+    src: "1918주님만이.jpg",
+    title: "1918. 주님만이(나약해있을때)",
+    song: "주님만이.m4a",
   },
 ];
