@@ -16,7 +16,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_8.jpg",
     title: "8.거룩거룩거룩전능하신주님",
     song: "거룩거룩거룩전능하신주님.m4a",
-    isThisWeek: true,
   },
   {
     src: "새찬송가반주용(A4사이즈)_9.jpg",
@@ -34,7 +33,12 @@ export const hymns: IHymn[] = [
   },
   { src: "새찬송가반주용(A4사이즈)_17.jpg", title: "17.사랑의하나님" },
   { src: "새찬송가반주용(A4사이즈)_18.jpg", title: "18.성도들아찬양하자" },
-  { src: "새찬송가반주용(A4사이즈)_19.jpg", title: "19.찬양하는소리있어" },
+  {
+    src: "새찬송가반주용(A4사이즈)_19.jpg",
+    title: "19.찬송하는소리있어",
+    song: "찬송하는소리있어.m4a",
+    isThisWeek: true,
+  },
   {
     src: "새찬송가반주용(A4사이즈)_20.jpg",
     title: "20.큰영광중에계신주",
@@ -310,6 +314,8 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_179.jpg",
     title: "179.주예수의강림이",
     song: "주예수의강림이.m4a",
+    isThisWeek: true,
+    isHomework: true,
   },
   { src: "새찬송가반주용(A4사이즈)_180.jpg", title: "180.하나님의나팔소리" },
   {
@@ -393,7 +399,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_220.jpg",
     title: "220.사랑하는주님앞에",
     song: "사랑하는주님앞에.m4a",
-    isThisWeek: true,
   },
   { src: "새찬송가반주용(A4사이즈)_221.jpg", title: "221.주믿는형제들" },
   {
@@ -604,19 +609,18 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_312.jpg",
     title: "312.너하나님께이끌리어",
     song: "너하나님께이끌리어.m4a",
-    isThisWeek: true,
   },
   { src: "새찬송가반주용(A4사이즈)_313.jpg", title: "313.내임금예수내주여" },
   {
     src: "새찬송가반주용(A4사이즈)_314.jpg",
     title: "314.내구주예수를더욱사랑",
     song: "내구주예수를더욱사랑.m4a",
-    isThisWeek: true,
-    isHomework: true,
   },
   {
     src: "새찬송가반주용(A4사이즈)_315.jpg",
     title: "315.내주되신주를참사랑하고",
+    song: "내주되신주를참사랑하고.m4a",
+    isThisWeek: true,
   },
   { src: "새찬송가반주용(A4사이즈)_316.jpg", title: "316.주여나의생명" },
   { src: "새찬송가반주용(A4사이즈)_317.jpg", title: "317.내주예수주신은혜" },
@@ -880,6 +884,8 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_438.jpg",
     title: "438.내영혼이은총입어",
     song: "내영혼이은총입어.m4a",
+    isThisWeek: true,
+    isHomework: true,
   },
   { src: "새찬송가반주용(A4사이즈)_439.jpg", title: "439.십자가로가까이" },
   {
@@ -1196,7 +1202,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_579.jpg",
     title: "579.어머니의넓은사랑",
     song: "어머니의넓은사랑.m4a",
-    isThisWeek: true,
   },
   {
     src: "새찬송가반주용(A4사이즈)_580.jpg",
