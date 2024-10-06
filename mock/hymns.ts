@@ -20,6 +20,7 @@ export const hymns: IHymn[] = [
   {
     src: "새찬송가반주용(A4사이즈)_9.jpg",
     title: "9.하늘에가득찬영광의하나님",
+    song: "하늘에가득찬영광의하나님.m4a",
   },
   { src: "새찬송가반주용(A4사이즈)_10.jpg", title: "10.전능왕오셔서" },
   { src: "새찬송가반주용(A4사이즈)_11.jpg", title: "11.홀로한분하나님께" },
@@ -37,7 +38,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_19.jpg",
     title: "19.찬송하는소리있어",
     song: "찬송하는소리있어.m4a",
-    isThisWeek: true,
   },
   {
     src: "새찬송가반주용(A4사이즈)_20.jpg",
@@ -91,7 +91,12 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_37.jpg",
     title: "37.주예수이름높이어",
   },
-  { src: "새찬송가반주용(A4사이즈)_38.jpg", title: "38.예수우리왕이여" },
+  {
+    src: "새찬송가반주용(A4사이즈)_38.jpg",
+    title: "38.예수우리왕이여",
+    song: "예수우리왕이여.m4a",
+    isThisWeek: true,
+  },
   { src: "새찬송가반주용(A4사이즈)_39.jpg", title: "39.주은혜를받으려" },
   {
     src: "새찬송가반주용(A4사이즈)_40.jpg",
@@ -195,6 +200,7 @@ export const hymns: IHymn[] = [
   {
     src: "새찬송가반주용(A4사이즈)_95.jpg",
     title: "95.나의기쁨나의소망되시며",
+    song: "나의기쁨나의소망되시며.m4a",
   },
   { src: "새찬송가반주용(A4사이즈)_96.jpg", title: "96.예수님은누구신가" },
   { src: "새찬송가반주용(A4사이즈)_97.jpg", title: "97.정혼한처녀에게" },
@@ -314,8 +320,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_179.jpg",
     title: "179.주예수의강림이",
     song: "주예수의강림이.m4a",
-    isThisWeek: true,
-    isHomework: true,
   },
   { src: "새찬송가반주용(A4사이즈)_180.jpg", title: "180.하나님의나팔소리" },
   {
@@ -552,6 +556,8 @@ export const hymns: IHymn[] = [
   {
     src: "새찬송가반주용(A4사이즈)_288.jpg",
     title: "288.예수를나의구주삼고",
+    song: "예수를나의구주삼고.m4a",
+    isThisWeek: true,
   },
   {
     src: "새찬송가반주용(A4사이즈)_289.jpg",
@@ -570,8 +576,15 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_292.jpg",
     title: "292.주없이살수없네",
     song: "주업이살수업네.m4a",
+    isThisWeek: true,
+    isHomework: true,
   },
-  { src: "새찬송가반주용(A4사이즈)_293.jpg", title: "293.주의사랑비칠때에" },
+  {
+    src: "새찬송가반주용(A4사이즈)_293.jpg",
+    title: "293.주의사랑비칠때에",
+    song: "주의사랑비칠때에.m4a",
+    isThisWeek: true,
+  },
   { src: "새찬송가반주용(A4사이즈)_294.jpg", title: "294.하나님은외아들을" },
   { src: "새찬송가반주용(A4사이즈)_295.jpg", title: "295.큰죄에빠진나를" },
   { src: "새찬송가반주용(A4사이즈)_296.jpg", title: "296.죄인구하시려고" },
@@ -620,7 +633,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_315.jpg",
     title: "315.내주되신주를참사랑하고",
     song: "내주되신주를참사랑하고.m4a",
-    isThisWeek: true,
   },
   { src: "새찬송가반주용(A4사이즈)_316.jpg", title: "316.주여나의생명" },
   { src: "새찬송가반주용(A4사이즈)_317.jpg", title: "317.내주예수주신은혜" },
@@ -783,7 +795,11 @@ export const hymns: IHymn[] = [
     song: "오신실하신주.m4a",
   },
   { src: "새찬송가반주용(A4사이즈)_394.jpg", title: "394.이세상의친구들" },
-  { src: "새찬송가반주용(A4사이즈)_395.jpg", title: "395.자비하신예수여" },
+  {
+    src: "새찬송가반주용(A4사이즈)_395.jpg",
+    title: "395.자비하신예수여",
+    song: "자비하신예수여.m4a",
+  },
   { src: "새찬송가반주용(A4사이즈)_396.jpg", title: "396.우리주님밤새워" },
   { src: "새찬송가반주용(A4사이즈)_397.jpg", title: "397.주사랑안에살면" },
   { src: "새찬송가반주용(A4사이즈)_398.jpg", title: "398.어둠의권세에서" },
@@ -884,8 +900,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_438.jpg",
     title: "438.내영혼이은총입어",
     song: "내영혼이은총입어.m4a",
-    isThisWeek: true,
-    isHomework: true,
   },
   { src: "새찬송가반주용(A4사이즈)_439.jpg", title: "439.십자가로가까이" },
   {
