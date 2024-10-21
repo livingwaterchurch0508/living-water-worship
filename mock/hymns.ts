@@ -48,6 +48,7 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_21.jpg",
     title: "21.다찬양하여라",
     song: "다찬양하여라.m4a",
+    isThisWeek: true,
   },
   { src: "새찬송가반주용(A4사이즈)_22.jpg", title: "22.만유의주앞에" },
   {
@@ -95,7 +96,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_38.jpg",
     title: "38.예수우리왕이여",
     song: "예수우리왕이여.m4a",
-    isThisWeek: true,
   },
   { src: "새찬송가반주용(A4사이즈)_39.jpg", title: "39.주은혜를받으려" },
   {
@@ -320,6 +320,8 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_179.jpg",
     title: "179.주예수의강림이",
     song: "주예수의강림이.m4a",
+    isThisWeek: true,
+    isHomework: true,
   },
   { src: "새찬송가반주용(A4사이즈)_180.jpg", title: "180.하나님의나팔소리" },
   {
@@ -583,7 +585,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_293.jpg",
     title: "293.주의사랑비칠때에",
     song: "주의사랑비칠때에.m4a",
-    isThisWeek: true,
   },
   { src: "새찬송가반주용(A4사이즈)_294.jpg", title: "294.하나님은외아들을" },
   { src: "새찬송가반주용(A4사이즈)_295.jpg", title: "295.큰죄에빠진나를" },

@@ -1,11 +1,10 @@
 export const prints: IHymn[] = [
-  { src: "프린트_001.jpg", title: "1.예수예수" },
+  /**{ src: "프린트_001.jpg", title: "1.예수예수" },
   { src: "프린트_002.jpg", title: "2.나는가네" },
   {
     src: "프린트_003.jpg",
     title: "3.이세상이세상",
     song: "이세상이세상.m4a",
-    isThisWeek: true,
   },
   { src: "프린트_004.jpg", title: "4.밤마다주님앞에" },
   { src: "프린트_005.jpg", title: "5.하나님아버지여" },
@@ -13,6 +12,7 @@ export const prints: IHymn[] = [
   { src: "프린트_007.jpg", title: "7.좋으신하나님", isMulti: 2 },
   { src: "프린트_007-1.jpg", title: "7.좋으신하나님" },
   { src: "프린트_008.jpg", title: "8.아멘아멘아멘" },
+      **/
   {
     src: "프린트_009.jpg",
     title: "9.아버지당신의마음이(하나님아버지의마음)",
@@ -82,7 +82,11 @@ export const prints: IHymn[] = [
   { src: "프린트_030.jpg", title: "30.주의이름높이며주를찬양" },
   { src: "프린트_031.jpg", title: "31.내주의은혜강가로" },
   { src: "프린트_032.jpg", title: "32.겟세마네동산에서" },
-  { src: "프린트_033.jpg", title: "33.나는믿노라" },
+  {
+    src: "프린트_033.jpg",
+    title: "33.나는믿노라",
+    song: "나는믿노라.m4a",
+  },
   { src: "프린트_034.jpg", title: "34.은혜" },
   { src: "프린트_035.jpg", title: "35.내삶을주께드리며" },
   { src: "프린트_036.jpg", title: "36.선한능력으로" },
@@ -108,6 +112,7 @@ export const prints: IHymn[] = [
     src: "프린트_046.jpg",
     title: "46.하나님의부르심",
     song: "하나님의부르심.m4a",
+    isThisWeek: true,
   },
   {
     src: "프린트_047.jpg",

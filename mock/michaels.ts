@@ -220,4 +220,20 @@ export const michaels: IHymn[] = [
     title: "1918. 주님만이(나약해있을때)",
     song: "주님만이.m4a",
   },
+  {
+    src: "2035신실하게진실하게.jpg",
+    title: "2035. 신실하게진실하게",
+    song: "신실하게진실하게.m4a",
+  },
+  {
+    src: "하나님의은혜.jpg",
+    title: "17. 하나님의은혜",
+    song: "하나님의은혜.m4a",
+    isMulti: 2,
+    isThisWeek: true,
+  },
+  {
+    src: "하나님의은혜-1.jpg",
+    title: "17. 하나님의은혜",
+  },
 ];
