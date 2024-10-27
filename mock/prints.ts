@@ -112,7 +112,6 @@ export const prints: IHymn[] = [
     src: "프린트_046.jpg",
     title: "46.하나님의부르심",
     song: "하나님의부르심.m4a",
-    isThisWeek: true,
   },
   {
     src: "프린트_047.jpg",
