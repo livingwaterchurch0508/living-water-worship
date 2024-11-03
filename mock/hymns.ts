@@ -43,6 +43,7 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_20.jpg",
     title: "20.큰영광중에계신주",
     song: "큰영광중에계신주.m4a",
+    isThisWeek: true,
   },
   {
     src: "새찬송가반주용(A4사이즈)_21.jpg",
@@ -195,7 +196,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_94.jpg",
     title: "94.주예수보다더귀한것은없네",
     song: "주예수보다더귀한것은없네.m4a",
-    isThisWeek: true,
   },
   {
     src: "새찬송가반주용(A4사이즈)_95.jpg",
@@ -562,6 +562,8 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_289.jpg",
     title: "289.주예수내맘에들어와",
     song: "주예수내맘에들어와.m4a",
+    isThisWeek: true,
+    isHomework: true,
   },
   {
     src: "새찬송가반주용(A4사이즈)_290.jpg",
@@ -617,7 +619,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_311.jpg",
     title: "311.내너를위하여",
     song: "내너를위하여.m4a",
-    isThisWeek: true,
   },
   {
     src: "새찬송가반주용(A4사이즈)_312.jpg",
@@ -895,7 +896,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_436.jpg",
     title: "436.나이제주님의새생명얻은몸",
     song: "나이제주님의새생명얻은몸.m4a",
-    isThisWeek: true,
   },
   { src: "새찬송가반주용(A4사이즈)_437.jpg", title: "437.하늘보좌떠나서" },
   {
