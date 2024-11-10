@@ -38,8 +38,6 @@ export const michaels: IHymn[] = [
     src: "날마다숨쉬는순간마다.jpg",
     title: "1009. 날마다숨쉬는순간마다",
     song: "1009날마다숨쉬는순간마다.m4a",
-    isThisWeek: true,
-    isHomework: true,
   },
   {
     src: "주나의모든것.jpg",
@@ -135,6 +133,7 @@ export const michaels: IHymn[] = [
     src: "1173아름다웠던지난추억들.jpg",
     title: "1173. 아름다웠던지난추억들",
     song: "아름다웠던지난추억들.m4a",
+    isThisWeek: true,
   },
   {
     src: "죄많은이세상은.jpg",
@@ -156,7 +155,6 @@ export const michaels: IHymn[] = [
     title: "1155. 목적도없이(험한십자가능력있네)",
     song: "목적도없이(험한십자가능력있네).m4a",
     isMulti: 2,
-    isThisWeek: true,
   },
   {
     src: "목적도없이(험한십자가능력있네)-1.jpg",
@@ -242,11 +240,22 @@ export const michaels: IHymn[] = [
     src: "854주님여이손을.jpg",
     title: "854. 주님여이손을",
     song: "주님여이곳에.m4a",
+    isThisWeek: true,
   },
   {
     src: "1658하나님은너를지키시는자.jpg",
     title: "1658.하나님은너를지키시는자",
     song: "하나님은너를지키시는자.m4a",
+  },
+  {
+    src: "낮엔해처럼밤엔달처럼.jpg",
+    title: "1088.낮엔해처럼밤엔달처럼",
+    isMulti: 2,
+    song: "낮엔해처럼밤엔달처럼.m4a",
     isThisWeek: true,
+  },
+  {
+    src: "낮엔해처럼밤엔달처럼-1.jpg",
+    title: "1088.낮엔해처럼밤엔달처럼",
   },
 ];
