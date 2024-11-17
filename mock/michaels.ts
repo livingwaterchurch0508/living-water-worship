@@ -133,7 +133,6 @@ export const michaels: IHymn[] = [
     src: "1173아름다웠던지난추억들.jpg",
     title: "1173. 아름다웠던지난추억들",
     song: "아름다웠던지난추억들.m4a",
-    isThisWeek: true,
   },
   {
     src: "죄많은이세상은.jpg",
@@ -203,6 +202,7 @@ export const michaels: IHymn[] = [
     src: "주품에.jpg",
     title: "1874. 주품에",
     song: "주품에.m4a",
+    isThisWeek: true,
   },
   {
     src: "여기에모인우리.jpg",
@@ -240,7 +240,6 @@ export const michaels: IHymn[] = [
     src: "854주님여이손을.jpg",
     title: "854. 주님여이손을",
     song: "주님여이곳에.m4a",
-    isThisWeek: true,
   },
   {
     src: "1658하나님은너를지키시는자.jpg",
@@ -252,7 +251,6 @@ export const michaels: IHymn[] = [
     title: "1088.낮엔해처럼밤엔달처럼",
     isMulti: 2,
     song: "낮엔해처럼밤엔달처럼.m4a",
-    isThisWeek: true,
   },
   {
     src: "낮엔해처럼밤엔달처럼-1.jpg",

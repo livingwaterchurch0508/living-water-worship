@@ -107,7 +107,6 @@ export const prints: IHymn[] = [
     src: "프린트_045.jpg",
     title: "45.주님나를부르시니(물위를걷는자)",
     song: "주님나를부르시니.m4a",
-    isThisWeek: true,
   },
   {
     src: "프린트_046.jpg",
