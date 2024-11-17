@@ -84,6 +84,7 @@ export const michaels: IHymn[] = [
     title: "1632. 또하나의열매를바라시며(감사해요)",
     song: "또하나의열매를바라시며.m4a",
     isMulti: 2,
+    isThisWeek: true,
   },
   {
     src: "또하나의열매를바라시며-1.jpg",
@@ -255,5 +256,11 @@ export const michaels: IHymn[] = [
   {
     src: "낮엔해처럼밤엔달처럼-1.jpg",
     title: "1088.낮엔해처럼밤엔달처럼",
+  },
+  {
+    src: "당신은사랑받기위해.jpg",
+    title: "1584.당신은사랑받기위해",
+    song: "당신은사랑받기위해.m4a",
+    isThisWeek: true,
   },
 ];
