@@ -31,14 +31,16 @@ export default function MultiContainer() {
     }
   }, [audioIndex]);
 
+  console.log("checkedItems", checkedItems);
+
   return (
     <>
       <MultiAudioItem />
       <Box mt="7rem">
         <Grid width="calc(100vw)" templateColumns={"repeat(1, 1fr)"} gap={1}>
-          {checkedItems.map(({ song, src, isMulti }, index) => (
+          {checkedItems.map(({ song, src, isMulti = 1 }, index) => (
             <>
-              <GridItem bg="gray.200" p={2} key={song}>
+              <GridItem bg="gray.200" p={2} key={`${song}-1`}>
                 <Box
                   height={
                     song
@@ -53,7 +55,7 @@ export default function MultiContainer() {
                 </Box>
               </GridItem>
               {isMulti === 2 && (
-                <GridItem bg="gray.200" p={2} key={song}>
+                <GridItem bg="gray.200" p={2} key={`${song}-2`}>
                   <Box
                     height={song ? "calc(100vh - 5rem)" : "calc(100vh - 1rem)"}
                     display="flex"
@@ -68,7 +70,7 @@ export default function MultiContainer() {
                 </GridItem>
               )}
               {isMulti === 3 && (
-                <GridItem bg="gray.200" p={2} key={song}>
+                <GridItem bg="gray.200" p={2} key={`${song}-3`}>
                   <Box
                     height={song ? "calc(100vh - 5rem)" : "calc(100vh - 1rem)"}
                     display="flex"
