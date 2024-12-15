@@ -38,12 +38,12 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_19.jpg",
     title: "19.찬송하는소리있어",
     song: "찬송하는소리있어.m4a",
-    isThisWeek: true,
   },
   {
     src: "새찬송가반주용(A4사이즈)_20.jpg",
     title: "20.큰영광중에계신주",
     song: "큰영광중에계신주.m4a",
+    isThisWeek: true,
   },
   {
     src: "새찬송가반주용(A4사이즈)_21.jpg",
@@ -576,6 +576,8 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_292.jpg",
     title: "292.주없이살수없네",
     song: "주업이살수업네.m4a",
+    isThisWeek: true,
+    isHomework: true,
   },
   {
     src: "새찬송가반주용(A4사이즈)_293.jpg",
@@ -695,6 +697,8 @@ export const hymns: IHymn[] = [
   {
     src: "새찬송가반주용(A4사이즈)_345.jpg",
     title: "345.캄캄한밤사나운바람불때",
+    song: "캄캄한밤사나운바람불때.m4a",
+    isThisWeek: true,
   },
   { src: "새찬송가반주용(A4사이즈)_346.jpg", title: "346.주예수우리구하려" },
   { src: "새찬송가반주용(A4사이즈)_347.jpg", title: "347.허락하신새땅에" },
@@ -802,6 +806,7 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_393.jpg",
     title: "393.오신실하신주",
     song: "오신실하신주.m4a",
+    isThisWeek: true,
   },
   { src: "새찬송가반주용(A4사이즈)_394.jpg", title: "394.이세상의친구들" },
   {
@@ -931,8 +936,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_447.jpg",
     title: "447.이세상끝날까지",
     song: "이세상끝날까지.m4a",
-    isThisWeek: true,
-    isHomework: true,
   },
   { src: "새찬송가반주용(A4사이즈)_448.jpg", title: "448.주님가신길을따라" },
   {
@@ -950,7 +953,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_453.jpg",
     title: "453.예수더알기원하네",
     song: "예수더알기원하네.m4a",
-    isThisWeek: true,
   },
   { src: "새찬송가반주용(A4사이즈)_454.jpg", title: "454.주와같이되기를" },
   {
@@ -1050,7 +1052,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_494.jpg",
     title: "494.만세반석열리니",
     song: "만세반석열리니.m4a",
-    isThisWeek: true,
   },
   { src: "새찬송가반주용(A4사이즈)_495.jpg", title: "495.익은곡식거둘자가" },
   { src: "새찬송가반주용(A4사이즈)_496.jpg", title: "496.새벽부터우리" },
@@ -1106,8 +1107,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_516.jpg",
     title: "516.옳은길따르라의의길을",
     song: "옳은길.m4a",
-    isThisWeek: true,
-    isHomework: true,
   },
   { src: "새찬송가반주용(A4사이즈)_517.jpg", title: "517.가난한자돌봐주며" },
   { src: "새찬송가반주용(A4사이즈)_518.jpg", title: "518.기쁜소리들리니" },
@@ -1206,7 +1205,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_563.jpg",
     title: "563.예수사랑하심을",
     song: "예수사랑하심을.m4a",
-    isThisWeek: true,
   },
   { src: "새찬송가반주용(A4사이즈)_564.jpg", title: "564.예수께서오실때에" },
   { src: "새찬송가반주용(A4사이즈)_565.jpg", title: "565.예수께로가면" },
@@ -1293,6 +1291,7 @@ export const hymns: IHymn[] = [
   {
     src: "새찬송가반주용(A4사이즈)_606.jpg",
     title: "606.해보다더밝은저천국",
+    song: "해보다더밝은저천국.m4a",
   },
   { src: "새찬송가반주용(A4사이즈)_607.jpg", title: "607.내본향가는길" },
   { src: "새찬송가반주용(A4사이즈)_608.jpg", title: "608.후일에생명그칠때" },

@@ -3,7 +3,6 @@ export const michaels: IHymn[] = [
     src: "주의거룩하심.jpg",
     song: "주의거룩하심.m4a",
     title: "564. 주의거룩하심",
-    isThisWeek: true,
   },
   {
     src: "주님의영광이임하여서.jpg",
@@ -240,6 +239,8 @@ export const michaels: IHymn[] = [
     src: "854주님여이손을.jpg",
     title: "854. 주님여이손을",
     song: "주님여이곳에.m4a",
+    isThisWeek: true,
+    isHomework: true,
   },
   {
     src: "1658하나님은너를지키시는자.jpg",
@@ -265,7 +266,5 @@ export const michaels: IHymn[] = [
     src: "온맘다해(주님과함께하는).jpg",
     title: "1951.온맘다해(주님과함께하는)",
     song: "온맘다해.m4a",
-    isThisWeek: true,
-    isHomework: true,
   },
 ];
