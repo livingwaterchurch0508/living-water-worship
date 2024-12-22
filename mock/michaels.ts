@@ -239,8 +239,6 @@ export const michaels: IHymn[] = [
     src: "854주님여이손을.jpg",
     title: "854. 주님여이손을",
     song: "주님여이곳에.m4a",
-    isThisWeek: true,
-    isHomework: true,
   },
   {
     src: "1658하나님은너를지키시는자.jpg",
@@ -266,5 +264,23 @@ export const michaels: IHymn[] = [
     src: "온맘다해(주님과함께하는).jpg",
     title: "1951.온맘다해(주님과함께하는)",
     song: "온맘다해.m4a",
+  },
+  {
+    src: "달리다굼.jpg",
+    title: "963.달리다굼(캄캄한인생길)",
+    isMulti: 2,
+    song: "달리다굼.m4a",
+    isThisWeek: true,
+    isHomework: true,
+  },
+  {
+    src: "달리다굼-1.jpg",
+    title: "963.달리다굼(캄캄한인생길)",
+  },
+  {
+    src: "예수님품으로(인생길험하고).jpg",
+    title: "886.예수님품으로(인생길험하고)",
+    song: "예수님품으로.m4a",
+    isThisWeek: true,
   },
 ];
