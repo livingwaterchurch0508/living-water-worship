@@ -283,4 +283,9 @@ export const michaels: IHymn[] = [
     song: "예수님품으로.m4a",
     isThisWeek: true,
   },
+  {
+    src: "주를사랑하는가.jpg",
+    title: "1082.주를사랑하는가",
+    song: "주를사랑하는가.m4a",
+  },
 ];
