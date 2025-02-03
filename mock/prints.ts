@@ -60,7 +60,6 @@ export const prints: IHymn[] = [
     src: "프린트_022.jpg",
     title: "22.이세상사는동안",
     song: "이세상사는동안.m4a",
-    isThisWeek: true,
   },
   {
     src: "프린트_023.jpg",
@@ -84,7 +83,6 @@ export const prints: IHymn[] = [
     src: "프린트_029.jpg",
     title: "29.예수안에소망있네",
     song: "예수안에소망있네.m4a",
-    isThisWeek: true,
   },
   { src: "프린트_030.jpg", title: "30.주의이름높이며주를찬양" },
   { src: "프린트_031.jpg", title: "31.내주의은혜강가로" },
@@ -98,7 +96,6 @@ export const prints: IHymn[] = [
     src: "프린트_034.jpg",
     title: "34.은혜",
     song: "은혜.m4a",
-    isThisWeek: true,
   },
   { src: "프린트_035.jpg", title: "35.내삶을주께드리며" },
   { src: "프린트_036.jpg", title: "36.선한능력으로" },
@@ -119,6 +116,7 @@ export const prints: IHymn[] = [
     src: "프린트_045.jpg",
     title: "45.주님나를부르시니(물위를걷는자)",
     song: "주님나를부르시니.m4a",
+    isThisWeek: true,
   },
   {
     src: "프린트_046.jpg",
@@ -168,6 +166,24 @@ export const prints: IHymn[] = [
   { src: "프린트_061-1.jpg", title: "61.마라나타" },
   { src: "프린트_062.jpg", title: "62.주사랑이나를숨쉬게해" },
   { src: "프린트_063.jpg", title: "63.아바아버지", song: "아바아버지.m4a" },
-  { src: "프린트_064.jpg", title: "64.내주를가까이더욱가까이" },
+  {
+    src: "프린트_064.jpg",
+    title: "64.내주를가까이더욱가까이",
+    song: "내주를가까이.m4a",
+    isThisWeek: true,
+  },
   { src: "프린트_065.jpg", title: "65.임재" },
+
+  {
+    src: "프린트_066.jpg",
+    title: "66.깊어진삶을주께",
+    song: "깊어진삶을주께.m4a",
+    isThisWeek: true,
+  },
+  {
+    src: "프린트_067.jpg",
+    title: "67.혼자걷지않을거예요",
+    song: "혼자걷지않을거예요.m4a",
+    isThisWeek: true,
+  },
 ];

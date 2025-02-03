@@ -94,6 +94,8 @@ export const michaels: IHymn[] = [
     title: "1933. 십자가그사랑멀리떠나서",
     song: "십자가그사랑.m4a",
     isMulti: 2,
+    isThisWeek: true,
+    isHomework: true,
   },
   {
     src: "십자가그사랑멀리떠나서-1.jpg",
@@ -270,8 +272,6 @@ export const michaels: IHymn[] = [
     title: "963.달리다굼(캄캄한인생길)",
     isMulti: 2,
     song: "달리다굼.m4a",
-    isThisWeek: true,
-    isHomework: true,
   },
   {
     src: "달리다굼-1.jpg",
@@ -281,11 +281,15 @@ export const michaels: IHymn[] = [
     src: "예수님품으로(인생길험하고).jpg",
     title: "886.예수님품으로(인생길험하고)",
     song: "예수님품으로.m4a",
-    isThisWeek: true,
   },
   {
     src: "주를사랑하는가.jpg",
     title: "1082.주를사랑하는가",
     song: "주를사랑하는가.m4a",
+  },
+  {
+    src: "왕이신나의하나님.jpg",
+    title: "706.왕이신나의하나님",
+    song: "왕이신나의하나님.m4a",
   },
 ];
