@@ -47,7 +47,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_20.jpg",
     title: "20.큰영광중에계신주",
     song: "큰영광중에계신주.m4a",
-    isThisWeek: true,
   },
   {
     src: "새찬송가반주용(A4사이즈)_21.jpg",
@@ -593,6 +592,7 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_284.jpg",
     title: "284.오랫동안모든죄가운데빠져",
     song: "오랫동안모든죄가운데빠져.m4a",
+    isThisWeek: true,
   },
   { src: "새찬송가반주용(A4사이즈)_285.jpg", title: "285.주의말씀받은그날" },
   {
@@ -622,7 +622,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_292.jpg",
     title: "292.주없이살수없네",
     song: "주업이살수업네.m4a",
-    isThisWeek: true,
   },
   {
     src: "새찬송가반주용(A4사이즈)_293.jpg",
@@ -706,8 +705,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_325.jpg",
     title: "325.예수가함께계시니",
     song: "예수가함께계시니.m4a",
-    isThisWeek: true,
-    isHomework: true,
   },
   { src: "새찬송가반주용(A4사이즈)_326.jpg", title: "326.내죄를회개하고" },
   { src: "새찬송가반주용(A4사이즈)_327.jpg", title: "327.주님주실화평" },
@@ -779,7 +776,13 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_356.jpg",
     title: "356.주예수이름소리높여",
   },
-  { src: "새찬송가반주용(A4사이즈)_357.jpg", title: "357.주믿는사람일어나" },
+  {
+    src: "새찬송가반주용(A4사이즈)_357.jpg",
+    title: "357.주믿는사람일어나",
+    song: "주믿는사람일어나.m4a",
+    isThisWeek: true,
+    isHomework: true,
+  },
   {
     src: "새찬송가반주용(A4사이즈)_358.jpg",
     title: "358.주의진리위해십자가군기",
