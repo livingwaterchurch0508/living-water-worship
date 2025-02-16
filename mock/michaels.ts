@@ -294,6 +294,5 @@ export const michaels: IHymn[] = [
     src: "내안에사는이.jpg",
     title: "752.내안에사는이",
     song: "내안에사는이.m4a",
-    isThisWeek: true,
   },
 ];
