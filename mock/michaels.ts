@@ -295,4 +295,11 @@ export const michaels: IHymn[] = [
     title: "752.내안에사는이",
     song: "내안에사는이.m4a",
   },
+  {
+    src: "말씀하시면.jpg",
+    title: "1757.말씀하시면",
+    song: "말씀하시면.m4a",
+    isThisWeek: true,
+    isHomework: true,
+  },
 ];
