@@ -74,7 +74,6 @@ export const michaels: IHymn[] = [
     title: "1172. 불속에라도들어가서(죄악된)",
     song: "불속에라도들어가서.m4a",
     isThisWeek: true,
-    isHomework: true,
   },
   {
     src: "감사찬송.jpg",
@@ -301,5 +300,11 @@ export const michaels: IHymn[] = [
     src: "말씀하시면.jpg",
     title: "1757.말씀하시면",
     song: "말씀하시면.m4a",
+  },
+  {
+    src: "주님손잡고일어서세요.jpg",
+    title: "1637.주님손잡고일어서세요",
+    song: "주님손잡고일어서세요.m4a",
+    isThisWeek: true,
   },
 ];
