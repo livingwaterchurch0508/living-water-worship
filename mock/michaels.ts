@@ -68,12 +68,13 @@ export const michaels: IHymn[] = [
     src: "목마른사슴.jpg",
     title: "608. 목마른사슴",
     song: "목마른사슴시냇물을찾아.m4a",
+    isThisWeek: true,
+    isHomework: true,
   },
   {
     src: "불속에라도들어가서.jpg",
     title: "1172. 불속에라도들어가서(죄악된)",
     song: "불속에라도들어가서.m4a",
-    isThisWeek: true,
   },
   {
     src: "감사찬송.jpg",
@@ -305,6 +306,5 @@ export const michaels: IHymn[] = [
     src: "주님손잡고일어서세요.jpg",
     title: "1637.주님손잡고일어서세요",
     song: "주님손잡고일어서세요.m4a",
-    isThisWeek: true,
   },
 ];
