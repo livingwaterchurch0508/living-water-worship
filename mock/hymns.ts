@@ -47,6 +47,7 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_20.jpg",
     title: "20.큰영광중에계신주",
     song: "큰영광중에계신주.m4a",
+    isThisWeek: true,
   },
   {
     src: "새찬송가반주용(A4사이즈)_21.jpg",
@@ -58,7 +59,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_23.jpg",
     title: "23.만입이내게있으면",
     song: "만입이내게있으면.m4a",
-    isThisWeek: true,
   },
   { src: "새찬송가반주용(A4사이즈)_24.jpg", title: "24.왕되신주" },
   { src: "새찬송가반주용(A4사이즈)_25.jpg", title: "25.면류관벗어서" },
@@ -67,7 +67,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_27.jpg",
     title: "27.빛나고높은보좌와",
     song: "빛나고높은보좌와.m4a",
-    isThisWeek: true,
   },
   { src: "새찬송가반주용(A4사이즈)_28.jpg", title: "28.복의근원강림하사" },
   { src: "새찬송가반주용(A4사이즈)_29.jpg", title: "29.성도여다함께" },
@@ -627,6 +626,8 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_292.jpg",
     title: "292.주없이살수없네",
     song: "주업이살수업네.m4a",
+    isThisWeek: true,
+    isHomework: true,
   },
   {
     src: "새찬송가반주용(A4사이즈)_293.jpg",
@@ -649,7 +650,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_302.jpg",
     title: "302.내주하나님넓고큰은혜는",
     song: "내주하나님.m4a",
-    isThisWeek: true,
   },
   { src: "새찬송가반주용(A4사이즈)_303.jpg", title: "303.날위하여십자가의" },
   {
@@ -665,6 +665,8 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_310.jpg",
     title: "310.아하나님의은혜로",
     song: "아하나님의은혜로.m4a",
+    isThisWeek: true,
+    isHomework: true,
   },
   {
     src: "새찬송가반주용(A4사이즈)_311.jpg",
@@ -732,7 +734,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_335.jpg",
     title: "335.크고놀라운평화가",
     song: "크고놀라운평화가.m4a",
-    isThisWeek: true,
   },
   { src: "새찬송가반주용(A4사이즈)_336.jpg", title: "336.환난과핍박중에도" },
   {
@@ -777,7 +778,12 @@ export const hymns: IHymn[] = [
     title: "353.십자가군병되어서",
     song: "십자가군병되어서.m4a",
   },
-  { src: "새찬송가반주용(A4사이즈)_354.jpg", title: "354.주를앙모하는자" },
+  {
+    src: "새찬송가반주용(A4사이즈)_354.jpg",
+    title: "354.주를앙모하는자",
+    isThisWeek: true,
+    isHomework: true,
+  },
   { src: "새찬송가반주용(A4사이즈)_355.jpg", title: "355.다같이일어나" },
   {
     src: "새찬송가반주용(A4사이즈)_356.jpg",
@@ -902,6 +908,8 @@ export const hymns: IHymn[] = [
   {
     src: "새찬송가반주용(A4사이즈)_407.jpg",
     title: "407.구주와함께나죽었으니",
+    isThisWeek: true,
+    isHomework: true,
   },
   { src: "새찬송가반주용(A4사이즈)_408.jpg", title: "408.나어느곳에있든지" },
   {
