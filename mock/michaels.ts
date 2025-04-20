@@ -230,7 +230,6 @@ export const michaels: IHymn[] = [
     title: "17. 하나님의은혜",
     song: "하나님의은혜.m4a",
     isMulti: 2,
-    isThisWeek: true,
   },
   {
     src: "하나님의은혜-1.jpg",

@@ -1,5 +1,10 @@
 export const pastors: IHymn[] = [
-  { src: "1_하나님나라.jpg", title: "1.하나님나라", song: "하나님나라.m4a" },
+  {
+    src: "1_하나님나라.jpg",
+    title: "1.하나님나라",
+    song: "하나님나라.m4a",
+    isThisWeek: true,
+  },
   { src: "2_주를찬양.jpg", title: "2.주를찬양" },
   { src: "3_아름다운교회.jpg", title: "3.아름다운교회" },
   { src: "4_주님뜻대로.jpg", title: "4.주님뜻대로" },
@@ -83,7 +88,6 @@ export const pastors: IHymn[] = [
     src: "프린트_003.jpg",
     title: "30.이세상이세상",
     song: "이세상이세상.m4a",
-    isThisWeek: true,
   },
   { src: "프린트_004.jpg", title: "31.밤마다주님앞에" },
   { src: "프린트_005.jpg", title: "32.하나님아버지여" },

@@ -47,7 +47,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_20.jpg",
     title: "20.큰영광중에계신주",
     song: "큰영광중에계신주.m4a",
-    isThisWeek: true,
   },
   {
     src: "새찬송가반주용(A4사이즈)_21.jpg",
@@ -512,6 +511,7 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_254.jpg",
     title: "254.내주의보혈은",
     song: "내주의보혈은.m4a",
+    isThisWeek: true,
   },
   { src: "새찬송가반주용(A4사이즈)_255.jpg", title: "255.너희죄흉악하나" },
   {
@@ -648,8 +648,6 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_302.jpg",
     title: "302.내주하나님넓고큰은혜는",
     song: "내주하나님.m4a",
-    isThisWeek: true,
-    isHomework: true,
   },
   { src: "새찬송가반주용(A4사이즈)_303.jpg", title: "303.날위하여십자가의" },
   {
@@ -976,6 +974,8 @@ export const hymns: IHymn[] = [
     src: "새찬송가반주용(A4사이즈)_436.jpg",
     title: "436.나이제주님의새생명얻은몸",
     song: "나이제주님의새생명얻은몸.m4a",
+    isThisWeek: true,
+    isHomework: true,
   },
   { src: "새찬송가반주용(A4사이즈)_437.jpg", title: "437.하늘보좌떠나서" },
   {
