@@ -3,6 +3,7 @@ export const pastors: IHymn[] = [
     src: "1_하나님나라.jpg",
     title: "1.하나님나라",
     song: "하나님나라.m4a",
+    isThisWeek: true,
   },
   { src: "2_주를찬양.jpg", title: "2.주를찬양" },
   { src: "3_아름다운교회.jpg", title: "3.아름다운교회" },

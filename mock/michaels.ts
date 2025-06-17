@@ -264,6 +264,7 @@ export const michaels: IHymn[] = [
     src: "온맘다해(주님과함께하는).jpg",
     title: "1951.온맘다해(주님과함께하는)",
     song: "온맘다해.m4a",
+    isThisWeek: true,
   },
   {
     src: "달리다굼.jpg",
